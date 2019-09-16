@@ -1,0 +1,386 @@
+/* STYLES GENERALS WEB SITE */
+html {
+  scroll-behavior: smooth;
+}
+@font-face {
+  font-family: fuenteNormal;
+  src: url(../src/fonts/georgia.TTF);
+}
+
+@font-face {
+  font-family: fuenteBold;
+  src: url(../src/fonts/georgiab.TTF);
+}
+
+@font-face {
+  font-family: fuenteItalic;
+  src: url(../src/fonts/georgiai.TTF);
+}
+
+body{
+  font-family: fuenteNormal;
+
+}
+
+/* STYLES HEADER */
+#hashTag{
+  padding-top:5px; 
+  color:#610010; 
+  font-family: fuenteItalic;
+  position: absolute;
+}
+
+.contentIconsTop{
+  padding-left: 0px; 
+  padding-right: 0px; 
+  text-align: right;
+}
+
+#iconsSocials{
+  color:#5f5f5f; font-size:22px; margin:5px 3px auto 3px;
+}
+
+#iconsSocials:hover{
+  color:#60000F;
+}
+
+/* STYLES BAR NAVIGATION */
+button:focus {
+  outline: 2px auto #60000F;
+}
+
+.navbar-brand{
+  display: none;
+}
+
+.topnav {
+  position: relative;
+  z-index: 100;
+  font-size: 17px;
+  color: #5f5f5f;
+  width: 100%;
+  padding: 0px;
+  top: 0px;
+  letter-spacing: 1px;
+  font-family: fuenteNormal;
+} 
+
+.topnavFixed{
+  position:fixed;
+  top:0px;
+  background:#F8F9FA;
+  padding:.25rem .75rem;
+  border-bottom:7px solid #610010;
+  z-index: 100;
+}
+
+#linkInicio{
+  letter-spacing: 1px;  
+  margin:10px 0px 0px 0px
+}
+
+#linkInicio:hover{
+  border-bottom: 3px solid #60000F;
+}
+
+#logoReyes{
+  width:100%;
+  padding:10px;
+}
+
+#paddingSmall{
+  padding:0px;
+}
+
+#ui-id-1 {
+  z-index: 2000;
+}
+
+#listNav{
+  font-size: 20px;
+  width: 100%;
+}
+
+#listNav li{
+  display: table;
+  margin: 0px auto 0px auto;
+}
+
+#ui-id-1{
+  color: #000;
+  width: 10px;
+  background: #FFF;
+  border: #CCC 1px solid;
+  padding: 4px 2px;
+}
+
+#ui-id-1 li:hover{
+    background: #F8F9FA;
+}
+
+li{
+    list-style:none;
+    margin-left: 3px;
+}
+
+.ui-helper-hidden-accessible{
+    display: none;
+}
+
+
+.btn-primary {
+  color: #fff;
+  background-color: #61000F;
+  border-color: #60000F; 
+}
+
+
+#linkModalT img{
+  width: 150px;
+  margin: 10px;
+}
+/*  */
+
+.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle {
+  color: #fff;
+  background-color: #830d1f;
+  border-color: #60000F; 
+}
+
+.btn-primary.focus, .btn-primary:focus {
+  background-color: #830d1f;
+  box-shadow: 0 0 0 0.2rem #60000F;
+}
+
+.btn-primary:hover {
+  color: #fff;
+  background-color: #830d1f;
+  border-color: #60000F;
+}
+
+.btn-primary:not(:disabled):not(.disabled).active:focus, .btn-primary:not(:disabled):not(.disabled):active:focus, .show>.btn-primary.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem #60000F;
+}
+
+.dropdown-item.active, .dropdown-item:active {
+  color: #fff;
+  text-decoration: none;
+  background-color: #830d1f;
+}
+
+/* STYLES ONLY SECTION SERVICES */
+#bodyServices{
+  background: #E5E5E5;
+}
+
+.containerServices{
+  height: 200px;
+}
+
+.titleSite{
+  font-family: fuenteNormal;
+  color: #60000F;
+  font-size: 30px;
+  letter-spacing: 4px;
+  margin: 35px auto 35px auto;
+}
+
+/* STYLES NOTICES */
+.noticesJumb{
+    background-image: url("../imgs/n1.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.card p{
+  text-align: justify;
+}
+
+/* STYLES CABILDO */
+#content-photo-cab{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15px;
+  margin-bottom: 15px;
+
+}
+
+.card-text{
+  text-align: center;
+}
+/* STYLES FOR FOOTER */
+#iconsSocialsFooter{
+  color:#F8F9FA; font-size:22px; margin:5px 3px auto 3px;
+}
+
+#iconsSocialsFooter:hover{
+  color:#E5E5E5;
+}
+
+#linksFooter{ 
+  color:#D6D6D6;
+  font-weight: normal;
+}
+
+#rowFooter{
+  border-bottom:1px solid #FFF;
+}
+
+#imgHead{
+  width: 100%;
+  height: 220px;
+}
+
+/* MEDIA SCREEN */
+@media only screen and (max-width: 1199px) {
+  #listNav{
+    font-size: 16px;  
+  }
+
+  #linkInicio{
+    font-size: 18px;  
+  }
+
+  #btnColapse{
+    margin-bottom: 10px;
+  }
+
+  
+
+  #servicesMun{width:250px}
+
+  #logoReyes {
+    width: 100px;
+  }
+} 
+
+@media only screen and (max-width: 991px) {
+
+  .containerSocials {
+    padding-right: 0px;
+  }
+
+  .containerServices{
+    height: 350px;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .rowServices{
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
+  #contentSm{
+    background: #F8F9FA;
+  }
+  
+  #listNav{
+    font-size: 20px;  
+  }
+
+  #linkInicio{
+    font-size: 20px;  
+    margin:0px 0px 0px 0px
+  }
+
+  #listNav li {
+    margin: 0px;
+  }
+
+  #listNav img{display:none}
+
+
+  .roadmap.roadmap--orientation-auto .roadmap__events__event:nth-child(odd) .event {
+    top: 0px;
+   }
+
+  .list-group{
+    max-height: 250px;
+    margin-bottom: 10px;
+    overflow:scroll;
+  }
+
+  .navbar-brand{
+    display: block;
+  }
+
+  .carousel{
+    margin-top: 93px;
+  }
+
+  .col-md-12, .col-sm-12, .col-12{
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+}
+
+@media (max-width: 768px) { 
+  #colTwitterSm{
+    margin-top: 30px;
+  }
+
+  #colMapSm{
+    margin-top: 30px;
+  }
+
+  #colServices{
+    margin-top: 40px;
+  }
+
+  #rowFooter{
+    padding-bottom: 30px;
+  }
+
+}
+
+@media (max-width: 576px) { 
+
+  #logoReyes{
+      margin-left: 15px;
+  }
+  
+  #logoGreca{
+    margin-left: -25px;
+    margin-top: 15px;
+  }
+
+
+  .navbar {
+    padding: 1rem 1.4rem;
+  }
+}
+
+
+@media (max-width: 475px) { 
+  #hashTag{
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 440px) { 
+  #hashTag{
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 424px) { 
+  #hashTag{
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 400px) { 
+  #hashTag{
+    display:none;
+  }
+}
+
+
+
+
+
+
