@@ -204,7 +204,7 @@ li{
   margin-right: auto;
   margin-top: 15px;
   margin-bottom: 15px;
-
+  width: 18rem;
 }
 
 .card-text{
@@ -336,7 +336,6 @@ li{
 
   #listNav img{display:none}
 
-
   .roadmap.roadmap--orientation-auto .roadmap__events__event:nth-child(odd) .event {
     top: 0px;
    }
@@ -359,6 +358,11 @@ li{
     padding-left: 5px;
     padding-right: 5px;
   }
+
+  #content-photo-cab{
+    width: auto;
+  }
+
 
 }
 
