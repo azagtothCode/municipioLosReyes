@@ -24,15 +24,15 @@ body{
 
 /* STYLES HEADER */
 #hashTag{
-  padding-top:5px; 
-  color:#610010; 
+  padding-top:5px;
+  color:#610010;
   font-family: fuenteItalic;
   position: absolute;
 }
 
 .contentIconsTop{
-  padding-left: 0px; 
-  padding-right: 0px; 
+  padding-left: 0px;
+  padding-right: 0px;
   text-align: right;
 }
 
@@ -63,7 +63,7 @@ button:focus {
   top: 0px;
   letter-spacing: 1px;
   font-family: fuenteNormal;
-} 
+}
 
 .topnavFixed{
   position:fixed;
@@ -75,7 +75,7 @@ button:focus {
 }
 
 #linkInicio{
-  letter-spacing: 1px;  
+  letter-spacing: 1px;
   margin:10px 0px 0px 0px
 }
 
@@ -131,7 +131,7 @@ li{
 .btn-primary {
   color: #fff;
   background-color: #61000F;
-  border-color: #60000F; 
+  border-color: #60000F;
 }
 
 
@@ -144,7 +144,7 @@ li{
 .btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle {
   color: #fff;
   background-color: #830d1f;
-  border-color: #60000F; 
+  border-color: #60000F;
 }
 
 .btn-primary.focus, .btn-primary:focus {
@@ -219,7 +219,7 @@ li{
   color:#E5E5E5;
 }
 
-#linksFooter{ 
+#linksFooter{
   color:#D6D6D6;
   font-weight: normal;
 }
@@ -233,28 +233,72 @@ li{
   height: 220px;
 }
 
+.containerImg {
+  position: relative;
+  width: 100%;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #60000F;
+  background-image: url(../imgs/grecablanca.png);
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: 100px;
+}
+
+.containerImg:hover .overlay {
+  opacity: 1;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.card-text{
+  color: white;
+  font-size: 18px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-weight: bold;
+  letter-spacing: 2px;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
 /* MEDIA SCREEN */
 @media only screen and (max-width: 1199px) {
   #listNav{
-    font-size: 16px;  
+    font-size: 16px;
   }
 
   #linkInicio{
-    font-size: 18px;  
+    font-size: 18px;
   }
 
   #btnColapse{
     margin-bottom: 10px;
   }
 
-  
-
   #servicesMun{width:250px}
 
   #logoReyes {
     width: 100px;
   }
-} 
+}
 
 @media only screen and (max-width: 991px) {
 
@@ -276,13 +320,13 @@ li{
   #contentSm{
     background: #F8F9FA;
   }
-  
+
   #listNav{
-    font-size: 20px;  
+    font-size: 20px;
   }
 
   #linkInicio{
-    font-size: 20px;  
+    font-size: 20px;
     margin:0px 0px 0px 0px
   }
 
@@ -318,7 +362,7 @@ li{
 
 }
 
-@media (max-width: 768px) { 
+@media (max-width: 768px) {
   #colTwitterSm{
     margin-top: 30px;
   }
@@ -337,12 +381,12 @@ li{
 
 }
 
-@media (max-width: 576px) { 
+@media (max-width: 576px) {
 
   #logoReyes{
       margin-left: 15px;
   }
-  
+
   #logoGreca{
     margin-left: -25px;
     margin-top: 15px;
@@ -355,32 +399,26 @@ li{
 }
 
 
-@media (max-width: 475px) { 
+@media (max-width: 475px) {
   #hashTag{
     font-size: 16px;
   }
 }
 
-@media (max-width: 440px) { 
+@media (max-width: 440px) {
   #hashTag{
     font-size: 15px;
   }
 }
 
-@media (max-width: 424px) { 
+@media (max-width: 424px) {
   #hashTag{
     font-size: 13px;
   }
 }
 
-@media (max-width: 400px) { 
+@media (max-width: 400px) {
   #hashTag{
     display:none;
   }
 }
-
-
-
-
-
-
