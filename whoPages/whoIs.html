@@ -14,7 +14,9 @@
   </div>
 
   <div class="container">
-    <div class="col" style="margin: 20px 0px 20px 0px;"><span class="titleSite">Historia</span></div>
+    <div class="col" style="margin: 20px 0px 20px 0px;">
+      <span id="showHistory" class="titleSite">Historia</span>
+    </div>
     <div class="col">
       <p class="text-justify">En sus orígenes la Paz perteneció a la región de los acolhuas, tenían su capital en Texcoco,
       quienes para mejorar sus condiciones de vida hicieron alianza con el régimen de
@@ -27,7 +29,8 @@
       <br><br>En este periodo surgieron los primeros pueblos que hoy integran al municipio: La
       Magdalena Atlicpac, San Sebastián Chimalpa, San Salvador Tecamachalco y los Reyes
       Acaquilpan.
-      <br><br>En 1875, el presidente Sebastián Lerdo de Tejada promulgo el decreto 128, que estableció:
+      <div id="aviso">
+      En 1875, el presidente Sebastián Lerdo de Tejada promulgo el decreto 128, que estableció:
       “Art. 1°. Se erigen en Municipio los pueblos de la magdalena Atlicpac, San Sebastián
       Chimalpa y Tecamachalco, de la municipalidad de Chimalhuacán – Atenco del Distrito de
       Texcoco siendo su cabecera la Magdalena Atlicpac”.
@@ -41,11 +44,11 @@
       sobre, por lo que conjuntamente significa sobre el agua o a la orilla de agua.
       <br><br>Por acuerdo de cabildo, el H:Ayuntamiento de La Paz 2006-2009 autorizo el uso oficial del
       toponinio de Acaquilpan en sustitucion del glifo del Pueblo de la Magdalena Atlicpac, para
-      preservar la identidad de los pueblos que dieron origen al municipio. 
+      preservar la identidad de los pueblos que dieron origen al municipio.
       <br><br>El escudo del municipio es un relieve o contorno de un jeroglifico del nahuatl Acaquilpan, cuyo
-      significado deriva de las raices 
+      significado deriva de las raices
       <br><strong>Acatl:</strong> caña de agua; <strong>Quillitl:</strong> verdura,quelite; <strong>Pan:</strong> sobre,
-      dentro; y su significado es <strong>“sobre los carrizos con hierva".</strong></p>
+      dentro; y su significado es <strong>“sobre los carrizos con hierva".</strong></p></div>
     </div>
     <div class="col" style="margin: 20px 0px 20px 0px;"><span class="titleSite">Zona Arquelogica</span></div>
     <div class="col">
@@ -64,7 +67,7 @@
       <div class="modal-content">
           <div class="modal-header">
               <p style="text-align: center; font-size: 18px; font-weight: bold" class="modal-title" id="exampleModalLabel">¿De que se trata tu petición?<br>
-                
+
               </p>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
@@ -120,11 +123,11 @@
   if(w<=991){
     var elementoContainer = document.getElementById("contentSm");
     elementoContainer.className = "container-fluid fixed-top";
-    
+
   }
 
   function changeHeightDiv() {
-    
+
     var res;
     currentvalue = document.getElementById('onoff').value;
       if(currentvalue == "Off"){
@@ -149,6 +152,31 @@
     // if (w <= 1199) {
     //   $('#imgHead').css("margin-top","150px");
     // }
+
+    $('#aviso').hide(0);
+
+
+		$(window).scroll(function(){
+
+
+				var windowHeight = $(window).scrollTop();
+				var contenido2 = $("#showHistory").offset();
+
+				contenido2 = contenido2.top;
+
+
+				if(windowHeight >= contenido2  ){
+
+
+					$('#aviso').fadeIn(500);
+
+				}else{
+					$('#aviso').fadeOut(500);
+
+				}
+
+
+		});
   });
 </script>
 </html>
