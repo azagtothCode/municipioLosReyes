@@ -76,7 +76,7 @@ button:focus {
 
 #linkInicio{
   letter-spacing: 1px;
-  margin:10px 0px 0px 0px
+  margin:20px 0px 0px 0px
 }
 
 #linkInicio:hover{
@@ -364,7 +364,14 @@ li{
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   text-align: center;
+}
 
+.titleSiteModal{
+  font-size: 20px;
+  font-family: fuenteNormal;
+  color: #60000F;
+  margin-top:15px; 
+  margin-bottom:15px; 
 }
 
 
