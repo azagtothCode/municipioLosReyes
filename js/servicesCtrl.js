@@ -1,8 +1,8 @@
 
-      var app = angular.module("myApp", []);
-      app.controller("myCtrl", function($scope) {
-        $scope.records = [
-          {
+    var app = angular.module("myApp", []);
+    app.controller("myCtrl", function($scope) {
+    $scope.records = [
+        {
             "id": 1,
             "value": "Secretaría",
             "site":"services/sec.html",
@@ -72,6 +72,27 @@
             "value": "Salud",
             "site":"services/sec.html",
             "description":"Breve descripcion del servicio mencionado"
-        }
-        ]
-      });
+        }]
+    });
+
+    app.controller('customersCtrl', function($scope, $http) {
+        $http.get("customers_mysql.php")
+        .then(function (response) {$scope.names = response.data.records;}
+        );
+    });
+
+    //  app.controller('customersCtrl', function($scope, $http) {
+    //     $scope.names = [
+    //         {
+    //           "idUser": 1,
+    //           "mailUser": "Secretaría",
+    //           "passUser":"services/sec.html",
+    //           "NameUser":"Breve descripcion del servicio mencionado"
+    //       }, {
+    //         "idUser": 2,
+    //         "mailUser": "Secretaría",
+    //         "passUser":"services/sec.html",
+    //         "NameUser":"Breve descripcion del servicio mencionado"
+    //       }
+    //       ]
+    //  });
