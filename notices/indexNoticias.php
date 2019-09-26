@@ -4,22 +4,15 @@
     <!-- Required meta tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/styles.css" >
+    <link rel="stylesheet" href="../css/styles.css" >
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="icon" href="imgs/menu.png" type="image/gif" sizes="16x16">
+    <link rel="icon" href="../imgs/menu.png" type="image/gif" sizes="16x16">
     <title>Los Reyes la Paz</title>
   </head>
   <body id="bodyPage" ng-app="myApp">
-    <div id="fb-root"></div>
-    <script>(function(d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s); js.id = id;
-      js.src = 'https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v3.2&appId=2173504562880317&autoLogAppEvents=1';
-      fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));</script>
     <!-- Bar navigation and bar socials -->
     <div id="contentSm">
       <div class="container containerSocials">
@@ -53,7 +46,7 @@
           <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" >
             <nav class="navbar navbar-expand-lg navbar-light " style="padding:0px" >
               <a class="navbar-brand" href="#" >
-                  <img src="imgs/menu.png" alt="..." style="width:65%;">
+                  <img src="../imgs/menu.png" alt="..." style="width:65%;">
               </a>
               <button style="background: #F8F9FA;" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
@@ -73,11 +66,11 @@
                     <a id="linkInicio" class="nav-link" href="" data-toggle="modal" data-target=".bd-example-modal-lg" >Atención Ciudadana</a>
                   </li>
                   <li class="nav-item">
-                    <a id="linkInicio" class="nav-link" href="notices/indexNoticias.php" target="_blank">Noticias</a>
+                    <a id="linkInicio" class="nav-link" href="#">Noticias</a>
                   </li>
                   <li id="liHidden" class="nav-item">
-                    <a href="#">
-                      <img id="logoReyes" src="imgs/menu.png" alt="Logo La Paz">
+                    <a href="../index.html" target="_blank">
+                      <img id="logoReyes" src="../imgs/menu.png" alt="Logo La Paz">
                     </a>
                   </li>
                   <li class="nav-item">
@@ -104,174 +97,29 @@
         </div>
       </div>
     </div>
-    <!-- Slider content -->
-    <div  id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-      <ol class="carousel-indicators">
-        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-        <!-- <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li> -->
-      </ol>
-      <div class="carousel-inner" role="listbox">
-        <div class="carousel-item active">
-          <!-- <img src="imgs/s1.jpg" class="d-block w-100" alt="..."> -->
-          <video style="width: 100%;" class="video-fluid" autoplay loop>
-              <source src="multimedia/fiestasN.mp4" class="d-block w-100" type="video/mp4" />
-          </video>
-        </div>
-        <!-- <div class="carousel-item">
-          <img src="imgs/s2.jpg" class="d-block w-100" alt="...">
-        </div>
-        <div class="carousel-item">
-          <img src="imgs/s3.jpg" class="d-block w-100" alt="...">
-        </div> -->
-      </div>
-      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
-    </div>
-    <!-- Notices content -->
-    <div class="container"  ng-controller="customersCtrl" >
-      <h1 class="titleSite">Noticias</h1>
-      <!-- <div class="jumbotron noticesJumb">
-        <h1 style="color:#FFF;" >El Gobierno Municipal de La Paz, Administración 2019-2021, compra una
-            retroexcavadora para brindar servicios de calidad a los habitantes de La
-            Paz.</h1>
-        <a class="btn btn-primary btn-lg" href="#" role="button">Ver más</a>
-      </div> -->
+    <!-- Content Notice -->
+    <div ng-controller="noticesCtrl">
+      <div class="container" style="margin-top:15px;">
       <div class="card-deck" >
         <div class="row">
-          <div class="col-6" ng-repeat="a in names | limitTo : 6 | orderBy : '-fechaNoticia'">
+          <div class="col-12" ng-repeat="a in noticesI | limitTo : 6 | orderBy : '-fechaNoticia'">
             <div class="card"  style="margin-bottom:10px; ">
-              <img src="imgs/{{a.imgNoticia }}" class="card-img-top" alt="...">
+              <img src="../imgs/{{a.imgNoticia }}" class="card-img-top" alt="...">
               <div class="card-body">
                 <!-- <h5 class="card-title">BOLETIN DE PRENSA</h5> -->
                 <p class="card-text">{{ a.tituloNoticia }}</p>
               </div>
               <div class="card-footer">
                 <a  class="card-link">{{ a.fechaNoticia }}</a>
-                <a href="notices/noticia.php?notice={{ a.idNoticia }}" target="_blank" class="card-link">Ver más</a>
+                <a href="noticia.php?notice={{ a.idNoticia }}" target="_blank" class="card-link">Ver más</a>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <!-- Services content -->
-    <div class="container">
-      <h1 class="titleSite">Tramites y Servicios</h1>
-    </div>
-    <div id="HeightDiv" class="container overflow-hidden containerServices" ng-controller="myCtrl">
-      <div class="row rowServices"  >
-        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12" ng-repeat="x in records" style="padding: 10px;">
-          <div class="card">
-            <div class="row no-gutters">
-                <div class="col-md-2">
-                  <img src="imgs/logolapaz.png" class="card-img" alt="..." style="margin:10px; max-width: 60px;">
-                </div>
-                <div class="col-md-10">
-                  <div class="card-body">
-                    <h5 class="card-title">{{x.value}}</h5>
-                    <p class="card-text">
-                      {{x.description}}...
-                    </p>
-                    <p class="card-text">
-                      <a href="{{x.site}}" class="btn btn-primary">Ver más</a>
-                    </p>
-                  </div>
-                </div>
-              </div>
-          </div>
-        </div>
       </div>
     </div>
-    <div class="container">
-      <button value="On" id="onoff" onclick="changeHeightDiv();" type="button" class="my-4 btn btn-lg btn-primary btn-block">
-        <span id="textButtonList">Mostrar más Servicios <i id="" class="fa fa-caret-square-o-down"></i></span><br>
-      </button>
-    </div>
-    <!-- Gaceta content -->
-    <!-- <div class="container">
-      <div class="column" >
-        <h1 class="titleSite">Gaceta Municipal</h1>
-
-        <div class="row" >
-          <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
-            <a class="btn btn-primary" href="http://www.losreyeslapaz.gob.mx/PDF/gaceta1.pdf"  target="_blank" role="button" style="width: 100%">ENERO - FEBREO 2019</a>
-          </div>
-          <div id="colServices" class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
-            <a class="btn btn-primary" href="http://www.losreyeslapaz.gob.mx/PDF/gaceta2.pdf"  target="_blank" role="button"style="width: 100%" >MARZO 2019</a>
-          </div>
-        </div>
-      </div>
-      <div class="column" >
-        <h1 class="titleSite">Publicaciones y Comunicados</h1>
-        <div class="row" >
-            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
-                <a class="btn btn-primary" href="http://www.losreyeslapaz.gob.mx/PDF/lineamientosprogamas.pdf"  target="_blank" role="button" style="width: 100%">Lineamientos Generales</a>
-            </div>
-            <div id="colServices" class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
-                <a class="btn btn-primary" href="http://www.losreyeslapaz.gob.mx/PDF/PAE2019LaPaz.pdf" role="button"style="width: 100%" target="_blank" >PAE 2019 LA PAZ</a>
-            </div>
-          </div>
-      </div>
-    </div> -->
-    <!-- Socials Content -->
-    <div class="container">
-      <div class="column" >
-        <h1 class="titleSite">Redes Sociales</h1>
-        <div class="row" >
-          <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
-            <div style="max-width: 100%;" class="fb-page" data-adapt-container-width="true" data-hide-cover="false" data-href="https://www.facebook.com/GMLosReyesLapaz/" data-show-facepile="true" data-small-header="false" data-tabs="timeline" data-width="500" data-height="550">
-              <blockquote cite="https://www.facebook.com/GMLosReyesLapaz/" class="fb-xfbml-parse-ignore">
-                <a href="https://www.facebook.com/GMLosReyesLapaz/">Gobierno Municipal Los Reyes La Paz 2019-2021</a>
-              </blockquote>
-            </div>
-          </div>
-          <div  class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12" >
-            <div style=" overflow: auto; max-height: 550px;">
-            <a class="twitter-timeline" href="https://twitter.com/GMLosReyesLaPaz?ref_src=twsrc%5Etfw">Tweets by GMLosReyesLaPaz</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Contact Content -->
-    <div class="container">
-      <div class="column"  style="margin-bottom: 30px">
-        <h1 class="titleSite">Contactanos</h1>
-        <div class="row" >
-            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
-              <form>
-                <div class="form-group">
-                  <label for="formGroupExampleInput">Nombre</label>
-                  <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Su nombre">
-                </div>
-                <div class="form-group">
-                  <label for="formGroupExampleInput2">Correo Electronico</label>
-                  <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="sucorreo@gmail.com">
-                </div>
-                <div class="form-group">
-                  <label for="formGroupExampleInput2">Telefono</label>
-                  <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Su telefono">
-                </div>
-                <div class="form-group">
-                  <label for="exampleFormControlTextarea1">Mensaje</label>
-                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary">Enviar</button>
-
-              </form>
-
-            </div>
-            <div id="colMapSm" class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
-              <iframe allowfullscreen="" frameborder="0" height="415" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d60225.994710080406!2d-98.98132284271509!3d19.363753802266928!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1e0b1199b2ead%3A0x65fbf55409bdc3c6!2sLos+Reyes%2C+M%C3%A9x.!5e0!3m2!1ses-419!2smx!4v1548913895479" style="border:0" width="100%"></iframe>        </div>
-          </div>
-      </div>
-    </div>
+    <!--  -->
     <!-- Footer content -->
     <div class="container-fluid" style="background: #610010; color:#FFF; font-size: 15px; padding-top: 35px;">
       <div class="container">
@@ -331,7 +179,7 @@
       <div class="container">
         <div class="row" >
           <div class="col-xl-2 col-lg-2 col-md-2 col-sm-3 col-3" style="text-align:center;">
-              <img style="width: 100%; margin-top: 40px;" src="imgs/glifo1.png">
+              <img style="width: 100%; margin-top: 40px;" src="../imgs/glifo1.png">
           </div>
           <div class="col-xl-10 col-lg-10 col-md-10 col-sm-9 col-9">
             <div class="row">
@@ -383,22 +231,22 @@
         <div class="modal-content">
           <div class="modal-body">
             <div class="column">
-                <a href="https://www.ipomex.org.mx/ipo/lgt/indice/lapaz.web" target="_blank"><img src="imgs/ipomex.png"></a>
+                <a href="https://www.ipomex.org.mx/ipo/lgt/indice/lapaz.web" target="_blank"><img src="../imgs/ipomex.png"></a>
             </div>
             <div class="column">
-              <a href="https://www.saimex.org.mx/saimex/ciudadano/login.page" target="_blank"> <img src="imgs/logoSaimex.png"></a>
+              <a href="https://www.saimex.org.mx/saimex/ciudadano/login.page" target="_blank"> <img src="../imgs/logoSaimex.png"></a>
             </div>
             <div class="column">
-              <a href="https://www.sarcoem.org.mx/sarcoem/ciudadano/login.page" target="_blank"><img src="imgs/sarcomex.svg"></a>
+              <a href="https://www.sarcoem.org.mx/sarcoem/ciudadano/login.page" target="_blank"><img src="../imgs/sarcomex.svg"></a>
             </div>
             <div class="column">
-              <a href="https://www.plataformadetransparencia.org.mx/web/guest/inicio" target="_blank"><img src="imgs/transparencia.png"></a>
+              <a href="https://www.plataformadetransparencia.org.mx/web/guest/inicio" target="_blank"><img src="../imgs/transparencia.png"></a>
             </div>
             <div class="column">
-              <a href="" target="_blank"><img src="imgs/conac.png"></a>
+              <a href="" target="_blank"><img src="../imgs/conac.png"></a>
             </div>
             <div class="column">
-              <a href="" target="_blank"><img src="imgs/datos.png"></a>
+              <a href="" target="_blank"><img src="../imgs/datos.png"></a>
             </div>
             <div class="column">
               <h1 class="titleSiteModal">Gaceta Municipal</h1>
@@ -459,34 +307,23 @@
     if(w<=991){
       var elementoContainer = document.getElementById("contentSm");
       elementoContainer.className = "container-fluid fixed-top";
-
     }
 
-    function changeHeightDiv() {
-
-      var res;
-      currentvalue = document.getElementById('onoff').value;
-        if(currentvalue == "Off"){
-          res= document.getElementById("onoff").value="On";
-          console.log(res)
-          document.getElementById("HeightDiv").style.height="200px";
-          document.getElementById("textButtonList").innerHTML = 'Mostrar más Servicios <i id="" class="fa fa-caret-square-o-down"></i>';
-
-        }else{
-          res=document.getElementById("onoff").value="Off";
-          console.log(res)
-          document.getElementById("HeightDiv").style.height="auto";
-          document.getElementById("textButtonList").innerHTML = 'Mostrar menos Servicios <i id="" class="fa fa-caret-square-o-up"></i>';
-
-        }
-    }
+    var app = angular.module("myApp", []);
+    app.controller('noticesCtrl', function($scope, $http) {
+        $http.get("../connections/noticesIndex.php")
+        .then(function (response) {$scope.noticesI = response.data.records;
+            console.log($scope.noticesI)}
+        );
+    });
+    
     </script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script src="js/servicesCtrl.js"></script>
+    <!-- <script src="../js/servicesCtrl.js"></script> -->
 
   </body>
 </html>

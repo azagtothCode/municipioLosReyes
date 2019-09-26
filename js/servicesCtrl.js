@@ -76,23 +76,14 @@
     });
 
     app.controller('customersCtrl', function($scope, $http) {
-        $http.get("customers_mysql.php")
-        .then(function (response) {$scope.names = response.data.records;}
+        $http.get("connections/noticesIndex.php")
+        .then(function (response) {$scope.names = response.data.records;
+            console.log($scope.names)}
         );
     });
 
-    //  app.controller('customersCtrl', function($scope, $http) {
-    //     $scope.names = [
-    //         {
-    //           "idUser": 1,
-    //           "mailUser": "Secretaría",
-    //           "passUser":"services/sec.html",
-    //           "NameUser":"Breve descripcion del servicio mencionado"
-    //       }, {
-    //         "idUser": 2,
-    //         "mailUser": "Secretaría",
-    //         "passUser":"services/sec.html",
-    //         "NameUser":"Breve descripcion del servicio mencionado"
-    //       }
-    //       ]
-    //  });
+    // app.controller('noticesCtrl', function( $http) {
+    //     $http.post("../connections/getNotices.php", { nombre: "name"});
+    // });
+
+    
