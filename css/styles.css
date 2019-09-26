@@ -216,6 +216,14 @@ li{
   width: 18rem;
 }
 
+#content-photo-notice-inline{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
 .card-text{
   text-align: center;
 }
@@ -305,6 +313,20 @@ li{
   text-align: center;
 }
 
+#content-photo-notice-inline .card-text{
+  color: white;
+  font-size: 22px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-weight: bold;
+  letter-spacing: 2px;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
 .lightbox {
 	/** Default lightbox to hidden */
 	display: none;
@@ -331,8 +353,6 @@ li{
 .lightbox:target {
 	/** Remove default browser outline */
 	outline: none;
-
-	/** Unhide lightbox **/
 	display: block;
 }
 

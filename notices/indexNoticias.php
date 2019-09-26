@@ -80,15 +80,15 @@
                     <a id="linkInicio" class="nav-link" data-toggle="modal" href="" data-target="#linkModalT">Transparencia</a>
                   </li>
                   <li class="nav-item dropdown">
-                      <a class="nav-link dropdown-toggle" href="#WhoIs" id="linkInicio" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          Mejora Regulatoria
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                          <a class="dropdown-item" href="" target="_blank">Catalogo Municipal de Regulaciones</a>
-                          <a class="dropdown-item" href="" target="_blank">Registro Municipal de Tramites y Servicios</a>
-                          <a class="dropdown-item" href="" target="_blank">Protesta Ciudadana</a>
-                          <a class="dropdown-item" href="" target="_blank">Consulta Pública</a>
-                        </div>
+                    <a class="nav-link dropdown-toggle" href="#WhoIs" id="linkInicio" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Mejora Regulatoria
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item" href="" target="_blank">Catalogo Municipal de Regulaciones</a>
+                      <a class="dropdown-item" href="" target="_blank">Registro Municipal de Tramites y Servicios</a>
+                      <a class="dropdown-item" href="" target="_blank">Protesta Ciudadana</a>
+                      <a class="dropdown-item" href="" target="_blank">Consulta Pública</a>
+                    </div>
                   </li>
                 </ul>
               </div>
@@ -97,29 +97,34 @@
         </div>
       </div>
     </div>
+    <!-- Header Section -->
+    <div class="container-fluid" style="background:#60000F; min-height:200px; padding-top:50px;">
+      <h1 style="color:#FFF; letter-spacing:2px;">Noticias</h1>
+      <span style="color:#FFF;">
+       En esta sección podrás encontrar las noticias más relevantes del ayuntamiento.
+      </span>
+    </div>
     <!-- Content Notice -->
     <div ng-controller="noticesCtrl">
       <div class="container" style="margin-top:15px;">
-      <div class="card-deck" >
-        <div class="row">
-          <div class="col-12" ng-repeat="a in noticesI | limitTo : 6 | orderBy : '-fechaNoticia'">
-            <div class="card"  style="margin-bottom:10px; ">
-              <img src="../imgs/{{a.imgNoticia }}" class="card-img-top" alt="...">
-              <div class="card-body">
-                <!-- <h5 class="card-title">BOLETIN DE PRENSA</h5> -->
-                <p class="card-text">{{ a.tituloNoticia }}</p>
-              </div>
-              <div class="card-footer">
-                <a  class="card-link">{{ a.fechaNoticia }}</a>
-                <a href="noticia.php?notice={{ a.idNoticia }}" target="_blank" class="card-link">Ver más</a>
-              </div>
+        <div class="card-deck" >
+          <div class="row">
+            <div class="col-12" ng-repeat="a in noticesI | orderBy : '-fechaNoticia'">
+              <a href="noticia.php?notice={{ a.idNoticia }}" target="_blank" class="card-link">
+                <div id="content-photo-notice-inline" class="card "  style="margin-bottom:10px; ">
+                  <div class="containerImg">
+                    <img class="image" src="../imgs/{{a.imgNoticia }}" class="card-img-top" alt="...">
+                    <div class="card-body overlay">
+                      <p class="card-text">{{ a.tituloNoticia }}</p>
+                    </div>
+                  </div>
+                </div>
+              </a>
             </div>
           </div>
         </div>
       </div>
-      </div>
     </div>
-    <!--  -->
     <!-- Footer content -->
     <div class="container-fluid" style="background: #610010; color:#FFF; font-size: 15px; padding-top: 35px;">
       <div class="container">
@@ -153,26 +158,26 @@
             </p>
           </div>
           <div class="col-xl-4 col-lg-4 col-md-5 col-sm-5 col-12" >
-                  <p style="font-weight: bold;">SIGUENOS EN</p>
-                  <a href="https://www.facebook.com/GMLosReyesLapaz/" target="_blank" title="Facebook"><i id="iconsSocialsFooter"  class="fa fa-facebook-square" ></i></a>
-                  <a href="https://twitter.com/GMLosReyesLaPaz?ref_src=twsrc%5Etfw" target="_blank" title="Twiiter"><i id="iconsSocialsFooter"  class="fa fa-twitter-square" ></i></a>
-                  <a href="" target="_blank" title="youtube"><i id="iconsSocialsFooter"  class="fa fa-youtube-square" ></i></a>
-                  <a href="" target="_blank" title="Instagram"><i id="iconsSocialsFooter"  class="fa fa-envelope-square" ></i></a>
-                  <a href="" target="_blank" title="Instagram"><i id="iconsSocialsFooter"  class="fa fa-camera-retro" ></i></a><br><br>
-                  PRESIDENCIA MUNICIPAL<br>
-                  PLAZA GENERAL LUIS CERON S/N,<br>
-                  CENTRO, LA PAZ, MEX. CP. 56400 <br><br>
+            <p style="font-weight: bold;">SIGUENOS EN</p>
+            <a href="https://www.facebook.com/GMLosReyesLapaz/" target="_blank" title="Facebook"><i id="iconsSocialsFooter"  class="fa fa-facebook-square" ></i></a>
+            <a href="https://twitter.com/GMLosReyesLaPaz?ref_src=twsrc%5Etfw" target="_blank" title="Twiiter"><i id="iconsSocialsFooter"  class="fa fa-twitter-square" ></i></a>
+            <a href="" target="_blank" title="youtube"><i id="iconsSocialsFooter"  class="fa fa-youtube-square" ></i></a>
+            <a href="" target="_blank" title="Instagram"><i id="iconsSocialsFooter"  class="fa fa-envelope-square" ></i></a>
+            <a href="" target="_blank" title="Instagram"><i id="iconsSocialsFooter"  class="fa fa-camera-retro" ></i></a><br><br>
+            PRESIDENCIA MUNICIPAL<br>
+            PLAZA GENERAL LUIS CERON S/N,<br>
+            CENTRO, LA PAZ, MEX. CP. 56400 <br><br>
           </div>
           <div class="col-xl-8 col-lg-8 col-md-7 col-sm-12 col-12" >
-              <a id="linksFooter" href="" target="_blank" title="Facebook">
-                <i id="iconsSocialsFooter"  class="fa fa-institution" ></i>
-                ¿Como llegar?
-              </a>
-                <br><br>
-              <a id="linksFooter" href="" target="_blank" title="youtube">
-                  <i id="iconsSocialsFooter"  class="fa fa-file" ></i>
-                Aviso de Privacidad
-              </a>
+            <a id="linksFooter" href="" target="_blank" title="Facebook">
+              <i id="iconsSocialsFooter"  class="fa fa-institution" ></i>
+              ¿Como llegar?
+            </a>
+              <br><br>
+            <a id="linksFooter" href="" target="_blank" title="youtube">
+                <i id="iconsSocialsFooter"  class="fa fa-file" ></i>
+              Aviso de Privacidad
+            </a>
           </div>
         </div>
       </div>
@@ -260,7 +265,7 @@
               </div>
             </div>
             <div class="column">
-                <h1 class="titleSiteModal">Publicaciones y Comunicados</h1>
+              <h1 class="titleSiteModal">Publicaciones y Comunicados</h1>
                 <div class="row" >
                   <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                       <a class="btn btn-primary" href="http://www.losreyeslapaz.gob.mx/PDF/lineamientosprogamas.pdf"  target="_blank" role="button" style="width: 100%">Lineamientos Generales</a>
