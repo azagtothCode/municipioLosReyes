@@ -106,7 +106,7 @@
     </div>
     <!-- Content Notice -->
     <div ng-controller="noticesCtrl">
-      <div class="container" style="margin-top:15px;">
+      <div class="container" style="margin-top:º15px;">
         <div class="card-deck" >
           <div class="row">
             <div class="col-12" ng-repeat="a in noticesI | orderBy : '-fechaNoticia'">
