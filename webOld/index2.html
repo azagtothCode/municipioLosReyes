@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>MUNICIPIO DE LA PAZ</title>
+	<!-- METAS --><meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" /><meta name="DC.Language" scheme="RFC1766" content="Spanish" />
+	<link href="compartir.jpg" rel="image_src" />
+	<link href="ICONO2.ico" rel="shortcut icon" /><meta name="description" content="Mantener  el  orden  y  la  paz  social  es  fundamental  para  la  Administración  Pública Municipal  2019-2021,  por  ello,  la  promulgación  y  observancia  del  Bando  Municipal constituye un sólido fundamento para promover la adecuada convivencia, el sentido de pertenencia a una colectividad, el respeto a la Ley y a la Autoridad Municipal." /><meta name="KEYWORDS" content="" /><meta name="Resource-type" content="Homepage" /><meta name="Revisit-after" content="15 days" /><meta name="Subject" content="GOBIERNO DEL MUNICIPIO DE LA PAZ." /><meta name="Revisit" content="1 day" /><meta name="robots" content="NoIndex,Follow" /><!--CSS-->
+	<link href="CSS/reset.css" rel="stylesheet" type="text/css" />
+	<link href="CSS/style.css" rel="stylesheet" type="text/css" />
+	<link href="CSS/menu_index.css" rel="stylesheet" type="text/css" />
+	<link href="CSS/general.css" rel="stylesheet" type="text/css" />
+	<link href="CSS/home.css" rel="stylesheet" type="text/css" />
+	<link href="CSS/buttons.css" rel="stylesheet" type="text/css" />
+	<link href="CSS/nosotros.css" rel="stylesheet" type="text/css" />
+	<link href="CSS/servicios.css" rel="stylesheet" type="text/css" />
+	<link href="CSS/galeria.css" rel="stylesheet" type="text/css" />
+	<link href="CSS/redes.css" rel="stylesheet" type="text/css" />
+	<link href="CSS/contacto.css" rel="stylesheet" type="text/css" />
+	<link href="CSS/pie.css" rel="stylesheet" type="text/css" />
+	<link href="CSS/hr.css" rel="stylesheet" type="text/css" />
+	<link href="https://fonts.googleapis.com/css?family=Noto+Serif" rel="stylesheet" /><!--js--><script type="text/javascript" src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+	<link href="jquery.jscrollpane.css" rel="stylesheet" type="text/css" /><script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script><script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"
+        type="text/javascript" charset="utf-8"></script><script type="text/javascript" src="jquery.jscrollpane.min.js"></script><script type="text/javascript" src="JS/menu.js"></script><script type="text/javascript">
+        jQuery(document).ready(function () {
+            if (!jQuery.browser.webkit) {
+                jQuery('.body').jScrollPane();
+            }
+        });
+    </script><script type="text/javascript" src="JS/jquery-1.9.1.min.js"></script><script type="text/javascript" src="JS/jssor.slider.min.js"></script><script type="text/javascript" src="JS/sm.js"></script><script>
+        jQuery(document).ready(function ($) {
+
+            var options = {
+                $SlideDuration: 1000,                    //[Optional] Specifies default duration (swipe) for slide in milliseconds, default value is 500
+                $DragOrientation: 3,                    //[Optional] Orientation to drag slide, 0 no drag, 1 horizental, 2 vertical, 3 either, default value is 1 (Note that the $DragOrientation should be the same as $PlayOrientation when $Cols is greater than 1, or parking position is not 0)
+                $AutoPlay: 1,                           //[Optional] Auto play or not, to enable slideshow, this option must be set to greater than 0. Default value is 0. 0: no auto play, 1: continuously, 2: stop at last slide, 4: stop on click, 8: stop on user navigation (by arrow/bullet/thumbnail/drag/arrow key navigation)
+                $Idle: 6000,                            //[Optional] Interval (in milliseconds) to go for next slide since the previous stopped if the slider is auto playing, default value is 3000
+
+                $BulletNavigatorOptions: {              //[Optional] Options to specify and enable navigator or not
+                    $Class: $JssorBulletNavigator$,     //[Required] Class to create navigator instance
+                    $ChanceToShow: 2,                   //[Required] 0 Never, 1 Mouse Over, 2 Always
+                    $Steps: 1,                          //[Optional] Steps to go for each navigation request, default value is 1
+                    $Rows: 1,                           //[Optional] Specify lanes to arrange items, default value is 1
+                    $SpacingX: 10,                      //[Optional] Horizontal space between each item in pixel, default value is 0
+                    $SpacingY: 10,                      //[Optional] Vertical space between each item in pixel, default value is 0
+                    $Orientation: 1                     //[Optional] The orientation of the navigator, 1 horizontal, 2 vertical, default value is 1
+                },
+
+                $ArrowNavigatorOptions: {
+                    $Class: $JssorArrowNavigator$,      //[Requried] Class to create arrow navigator instance
+                    $ChanceToShow: 2                    //[Required] 0 Never, 1 Mouse Over, 2 Always
+                }
+            };
+
+            var jssor_slider1 = new $JssorSlider$('slider1_container', options);
+            //make sure to clear margin of the slider container element
+            jssor_slider1.$Elmt.style.margin = "";
+
+            //#region responsive code begin
+            //the following code is to place slider in the center of parent container with no scale
+            function ScaleSlider() {
+
+                var containerElement = jssor_slider1.$Elmt.parentNode;
+                var containerWidth = containerElement.clientWidth;
+
+                if (containerWidth) {
+                    var expectedWidth = Math.min(containerWidth, jssor_slider1.$OriginalWidth());
+
+                    //scale the slider to original height with no change
+                    jssor_slider1.$ScaleSize(expectedWidth, jssor_slider1.$OriginalHeight());
+
+                    jssor_slider1.$Elmt.style.left = ((containerWidth - expectedWidth) / 2) + "px";
+                }
+                else {
+                    window.setTimeout(ScaleSlider, 30);
+                }
+            }
+
+            ScaleSlider();
+
+            $(window).bind("load", ScaleSlider);
+            $(window).bind("resize", ScaleSlider);
+            $(window).bind("orientationchange", ScaleSlider);
+            //#endregion responsive code end
+        });
+    </script>
+</head>
+<body class="body">
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v3.2&appId=2173504562880317&autoLogAppEvents=1';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<header>
+<div class="bar" style="margin-top: 0; background-color:#e0e0e0; background-image: none; height: 25px; padding-top: 7px; border-bottom: 3px solid #610011; ">
+<p style="top: 0; font-size: 12px; margin: 0; font-weight: normal; text-align: center; color: #610011; font-family: 'Noto Serif', serif;">LA PATRIA ES PRIMERO - VICENTE GUERRERO</p>
+</div>
+
+<div class="menu_bar">
+<h6><a class="btnmenu"> <img id="imgcam2" src="IMAGES/GENERAL/LOGO.png" /></a></h6>
+</div>
+
+<div class="logo"><img id="imgcam" src="IMAGES/GENERAL/LOGO.png" /></div>
+
+<nav>
+<ul>
+	<li><a class="botonm1" href="transparencia.html">Transparencia</a></li>
+	<li><a class="botonm1" href="organigrama.html">Organigrama</a></li>
+	<li class="dropdown"><a class="botonm1 dropbtn" href="#servicios">Tramites y Servicios</a>
+	<div class="dropdown-content"><a href="#">SECRETARIA</a> <a href="#">CATASTRO</a> <a href="#">REGLAMENTOS</a> <a href="#">MOVILIDAD Y V&Iacute;A P&Uacute;BLICA</a> <a href="#">DESARROLLO ECON&Oacute;MICO Y AGROPECUARIO</a> <a href="#">DESARROLLO URBANO</a> <a href="#">MEDIO AMBIENTE</a> <a href="#">OFICIALIA MAYOR</a> <a href="#">TIANGUIS</a> <a href="#">MERCADOS</a> <a href="#">REGISTRO CIVIL</a> <a href="#">GONERNACI&Oacute;N</a> <a href="#">EDUCACI&Oacute;N</a> <a href="#">SALUD</a></div>
+	</li>
+	<li class="dropdown"><a class="botonm1 dropbtn" href="#social">&iquest;Qui&eacute;nes Somos?</a>
+	<div class="dropdown-content"><a href="#">HISTORIA</a> <a href="#">IDENTIDAD</a></div>
+	</li>
+	<li><a class="botonm1" href="#inicio">Inicio</a></li>
+	<li><a class="botonm1" href="atn_cid.html">Atenci&oacute;n Ciudadana</a></li>
+</ul>
+</nav>
+
+<div class="bar" style="height: 25PX; padding-top: 7px; padding-right: 10px; padding-bottom: 0; width: 100%;">
+<p style="top: 0; font-size: 12px; margin: 0; font-weight: normal; text-align: right; color:#610011; font-family: 'Noto Serif', serif; padding-right: 10px;">&nbsp;&nbsp;GOBIERNO Y PUEBO CAMBIO VERDADERO</p>
+</div>
+</header>
+
+<div class="secgaleria" id="inicio" style="padding-top:150px;">
+<div class="textosg"></div>
+<!--#region Jssor Slider Begin -->
+
+<div id="slider1_container" style="position: relative; margin: 0 auto; top: 0px; left: 0px; width: 1000px; height: 450px;"><!-- Loading Screen -->
+<div class="jssorl-009-spin" data-u="loading" style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; text-align: center; background-color: rgba(0,0,0,0.7);"><img src="../svg/loading/static-svg/spin.svg" style="margin-top: -19px; position: relative; top: 50%; width: 38px; height: 38px;" /></div>
+<!-- Slides Container -->
+
+<div data-u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 1000px; height: 450px; overflow: hidden;">
+<div><img data-u="image" src="IMAGES/GALERY/R1.fw.png" /></div>
+
+<div><img data-u="image" src="IMAGES/GALERY/R2.fw.png" /></div>
+
+<div><img data-u="image" src="IMAGES/GALERY/R3.fw.png" /></div>
+</div>
+<!--#region Bullet Navigator Skin Begin --><!-- Help: https://www.jssor.com/development/slider-with-bullet-navigator.html -->
+<style type="text/css">.jssorb051 .i {
+                        position: absolute;
+                        cursor: pointer;
+                    }
+
+                        .jssorb051 .i .b {
+                            fill: #fff;
+                            fill-opacity: 0.5;
+                            stroke: #000;
+                            stroke-width: 400;
+                            stroke-miterlimit: 10;
+                            stroke-opacity: 0.5;
+                        }
+
+                        .jssorb051 .i:hover .b {
+                            fill-opacity: .7;
+                        }
+
+                    .jssorb051 .iav .b {
+                        fill-opacity: 1;
+                    }
+
+                    .jssorb051 .i.idn {
+                        opacity: .3;
+                    }
+</style>
+<div class="jssorb051" data-autocenter="1" data-scale="0.5" data-scale-bottom="0.75" data-u="navigator" style="position: absolute; bottom: 12px; right: 12px;">
+<div class="i" data-u="prototype" style="width: 16px; height: 16px;"><svg style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" viewbox="0 0 16000 16000"> <circle class="b" cx="8000" cy="8000" r="5800"></circle> </svg></div>
+</div>
+<!--#endregion Bullet Navigator Skin End --><!--#region Arrow Navigator Skin Begin --><!-- Help: https://www.jssor.com/development/slider-with-arrow-navigator.html -->
+<style type="text/css">.jssora051 {
+                        display: block;
+                        position: absolute;
+                        cursor: pointer;
+                    }
+
+                        .jssora051 .a {
+                            fill: none;
+                            stroke: #fff;
+                            stroke-width: 360;
+                            stroke-miterlimit: 10;
+                        }
+
+                        .jssora051:hover {
+                            opacity: .8;
+                        }
+
+                        .jssora051.jssora051dn {
+                            opacity: .5;
+                        }
+
+                        .jssora051.jssora051ds {
+                            opacity: .3;
+                            pointer-events: none;
+                        }
+</style>
+<div class="jssora051" data-autocenter="2" data-scale="0.75" data-scale-left="0.75" data-u="arrowleft" style="width: 55px; height: 55px; top: 0px; left: 25px;"><svg style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" viewbox="0 0 16000 16000"> <polyline class="a" points="11040,1920 4960,8000 11040,14080 "></polyline> </svg></div>
+
+<div class="jssora051" data-autocenter="2" data-scale="0.75" data-scale-right="0.75" data-u="arrowright" style="width: 55px; height: 55px; top: 0px; right: 25px;"><svg style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" viewbox="0 0 16000 16000"> <polyline class="a" points="4960,1920 11040,8000 4960,14080 "></polyline> </svg></div>
+<!--#endregion Arrow Navigator Skin End --></div>
+<!--#endregion Jssor Slider End --></div>
+
+<div class="paquetes" id="servicios">
+<div class="textoss">
+<h1>SERVICIOS</h1>
+</div>
+
+<div class="servicios">
+<div class="serv">
+<h1>Copia certificada del acta de nacimiento</h1>
+<img alt="" src="IMAGES/GENERAL/gest_amb.jpg" />
+<p>Expedici&oacute;n de la copia certificada del acta de nacimiento en l&iacute;nea</p>
+<a class="button btnlarge transparent blue" href="https://www.gob.mx/tramites/ficha/expedicion-de-la-copia-certificada-del-acta-de-nacimiento-en-linea/RENAPO187">Conozca m&aacute;s </a></div>
+
+<div class="serv">
+<h1>Predial</h1>
+<img alt="" src="IMAGES/GENERAL/edu.jpg" />
+<p>Desde ahora puedes cumplir de manera electr&oacute;nica con la obligaci&oacute;n de pago...</p>
+<a class="button btnlarge transparent blue" href="https://sfpya.edomexico.gob.mx/recaudacion/index.jsp?opcion=44">Conozca m&aacute;s </a></div>
+
+<div class="serv">
+<h1>Voto desde el extranjero</h1>
+<img alt="" src="IMAGES/GENERAL/cap.jpg" />
+<p>M&eacute;xico est&aacute; donde est&aacute;s t&uacute;...</p>
+<br />
+<br />
+<a class="button btnlarge transparent blue" href="http://www.votoextranjero.mx/web/vmre/inicio">Conozca m&aacute;s </a></div>
+
+<div class="serv">
+<h1>Atenci&oacute;n Ciudadana</h1>
+<img alt="" src="IMAGES/GENERAL/insumos.jpg" />
+<p>Te invitamos a decidir y colaborar con tu gobierno para la construcci&oacute;n y mejora...</p>
+<a class="button btnlarge transparent blue" href="atn_cid.html">Conozca m&aacute;s </a></div>
+</div>
+</div>
+
+<div class="secredes" id="social">
+<div class="textosc">
+<p>REDES <strong>SOCIALES</strong></p>
+</div>
+
+<div class="formulario" id="formulario" style="margin-top: 50px;">
+<div class="fb-page" data-adapt-container-width="true" data-hide-cover="false" data-href="https://www.facebook.com/GMLosReyesLapaz/" data-show-facepile="true" data-small-header="false" data-tabs="timeline" data-width="500">
+<blockquote cite="https://www.facebook.com/GMLosReyesLapaz/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/GMLosReyesLapaz/">Gobierno Municipal Los Reyes La Paz 2019-2021</a></blockquote>
+</div>
+</div>
+
+<div class="formulario" style="margin-bottom: 50px; overflow: auto; max-height: 550px;"><br />
+<br />
+<a class="twitter-timeline" href="https://twitter.com/GMLosReyesLaPaz?ref_src=twsrc%5Etfw">Tweets by GMLosReyesLaPaz</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></div>
+
+<div style="width: 80%; margin:auto; margin-top: 50px; "><!--<iframe allow="accelerometer;autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" frameborder="0" height="500" src="https://www.youtube.com/embed/videoseries?list=UUFckJ2t09K3yot9U_laR0Mg" width="100%"></iframe>--></div>
+</div>
+
+<div class="seccontacto" id="contact">
+<div class="textosc">
+<h1>Comunicate con nosotros</h1>
+
+<p>Informanos de fallas en el alumbrado p&uacute;blico, ya sean lamparas apagadas, intermitentes, encendidas de d&iacute;a o cualquier falla en la red del Municipio y no tardaremos en corregir los desperfectos.</p>
+</div>
+
+<div class="formulario" id="formulario">
+<div><script type="text/javascript">
+                        function validar(frmContacto) {
+                            if (frmContacto.nombre.value == "") {
+                                alert('Por favor llene todos los campos.'); return false;
+                            }
+                            if (frmContacto.email.value == "") {
+                                alert('Por favor llene todos los campos.'); return false;
+                            }
+                            if (frmContacto.asunto.value == "") {
+                                alert('Por favor llene todos los campos.'); return false;
+                            }
+                            else {
+                                return true;
+                            }
+                        }
+                        var onloadCallback = function () {
+                            grecaptcha.render('html_element', {
+                                '6LdVJ3wUAAAAAG94Pe4ehpqXw9_01MnipKKuXokK': '6LdVJ3wUAAAAAMkcgtXtdsIiNsB5KxEjDnt-yjr8'
+                            });
+
+                        };
+
+                    </script>
+<form action="php/contacto.php" method="post" name="frmContacto" onsubmit="return validar(this);" style="align-content: space-between"><input id="nombre" name="nombre" placeholder="Nombre" type="text" /><br />
+<input id="email" name="email" placeholder="Email" type="text" /><br />
+<input id="tel" name="tel" placeholder="Teléfono" type="text" /><br />
+<textarea cols="40" id="asunto" name="asunto" placeholder="Mensaje" rows="5"></textarea> <!--  <div class="g-recaptcha" data-sitekey="6LdVJ3wUAAAAAG94Pe4ehpqXw9_01MnipKKuXokK"></div>   <br >--> <input class="button btnmedium transparent blue" type="submit" value="Enviar" /></form>
+</div>
+</div>
+
+<div class="formulario"><iframe allowfullscreen="" frameborder="0" height="415" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d60225.994710080406!2d-98.98132284271509!3d19.363753802266928!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1e0b1199b2ead%3A0x65fbf55409bdc3c6!2sLos+Reyes%2C+M%C3%A9x.!5e0!3m2!1ses-419!2smx!4v1548913895479" style="border:0" width="100%"></iframe></div>
+<br />
+&nbsp;</div>
+
+<div class="secpie">
+<div class="secinfo">
+<div class="logo"><img src="IMAGES/GENERAL/LOGOF.png" /></div>
+
+<div class="text">
+<p><strong>Centro de mando municipal: </strong>58564285</p>
+
+<p><strong>Bomberos: </strong>58570990</p>
+
+<p><strong>Protecci&oacute;n civil: </strong>58572028</p>
+
+<p><strong>Correo Institucional Interno </strong><br />
+<br />
+contacto@lapazedomex.com.mx</p>
+</div>
+
+<div></div>
+</div>
+
+<div class="secinfo2">
+<div class="logo">
+<p style="font-size: 24px; margin-top: 0;
+    color: #bdbdbd;"><strong>Transparencia</strong></p>
+<a href="https://www.plataformadetransparencia.org.mx/web/guest/inicio">Plataforma Nacional de Transparencia</a> <a href="https://www.sarcoem.org.mx/sarcoem/ciudadano/login.page">sarcoem</a> <a href="hhttps://www.saimex.org.mx/saimex/ciudadano/login.page">saimex</a> <a href="https://www.ipomex.org.mx/ipo/lgt/indice/lapaz.web">ipomex</a> <a href="transparencia.html">CONAC</a> <a href="transparencia.html">Titulo IV</a> <a href="transparencia.html">Titulo V</a></div>
+
+<div class="text">
+<p style="font-size: 24px; margin-top: 0; color:  #bdbdbd;"><strong>Enlaces externos</strong></p>
+<a href="https://www.gob.mx/presidencia">Presidencia de la Rep&uacute;blica</a> <a href="http://edomex.gob.mx/">Gobierno del Estado de M&eacute;xico</a> <a href="https://www.cdmx.gob.mx/"> Gobierno de la Ciudad de M&eacute;xico</a> <a href="https://www.ine.mx/portal/">Instituto Nacional Electoral</a></div>
+
+<div></div>
+</div>
+
+<div class="sec3">
+<p style="font-size: .8em">Copyright &copy; 2019 Derechos Reservados. Todas las marcas, logotipos, iconos e im&aacute;genes son propiedad de sus respectivos autores y solo se utilizan con fines ilustrativos. Los precios mostrados son los totales a pagar en moneda nacional. El uso de este portal web y todos sus servicios constituye la aceptaci&oacute;n de nuestros T&eacute;rminos y Condiciones.</p>
+</div>
+</div>
+
+<div class="social">
+<ul>
+	<li></li>
+	<li><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></li>
+	<li></li>
+	<li></li>
+</ul>
+</div>
+</body>
+</html>

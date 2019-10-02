@@ -1,0 +1,17 @@
+.atn{
+	width: 80%;
+	box-sizing: border-box;
+	padding: 10px;
+	margin: auto;
+}
+.atn p {
+	display: block;
+	text-align: center;
+}
+.texttarea{
+	box-sizing: border-box;
+	width: 80%;
+	margin-left: 10%;
+	min-height: 300px;
+	padding: 15px;
+}

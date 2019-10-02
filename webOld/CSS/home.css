@@ -1,0 +1,168 @@
+﻿@import url('https://fonts.googleapis.com/css?family=Staatliches');
+.contenido {
+    width:100%;
+    min-height:100%;
+background: url(../IMAGES/TURING/office.jpg) no-repeat center center fixed ;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+}
+ #full-screen-background-image {
+        z-index: -999;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+.contenedorhome {
+width: 100%;
+height:100%;
+background: url(../IMAGES/TURING/grapper.png) no-repeat center center ;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+  /*background-color: rgba(0,0,0,.3);*/
+
+}
+.contenidohome {
+  position:relative;
+  width:100%;
+  height:100%;
+  top:100px;
+}
+.homecontent {
+  position: absolute;
+  top:10%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width:80%;
+  overflow:auto;
+}
+.homelogo {
+     width:30%;
+    float:left;
+    padding:5%;
+    padding-top:0;
+}
+.homelogo img{
+    
+
+
+    width:100%;
+}
+.hometexto {
+    width:60%;
+    min-height:300px;
+    float:right;
+    color:#333333;
+    background-color: rgba(255,255,255,.5);
+    text-align: center;
+        box-sizing: border-box;
+        padding: 10px;
+        border:20px solid rgba(255,255,255,.3);
+}
+.hometexto h3{
+   display:block;
+   width:90%;
+   font-size:3em;
+   padding:5%;
+   font-weight:normal;
+   margin-top:0;
+   margin-bottom:0;
+    font-family: 'Staatliches', cursive;
+    color: #2F1D73;
+    padding-bottom: 0;
+}
+.hometexto h3 strong{
+  color: #3EEE10;
+}
+.hometexto p{
+   display:block;
+   width:90%;
+   font-size:1.5em;
+   padding-left:5%;
+   font-weight:normal;
+   margin-top:0;
+   margin-bottom:13px;
+   color:#333333;
+    font-family: 'Staatliches', cursive;
+}
+.homecontentextra {
+      position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width:100%;
+  height:100%;
+  overflow:auto;
+}
+@media screen and (max-width:980px) {
+    .homecontent {
+  width:90%;
+  margin-top:50px;
+    }
+   .hometexto h3{
+   font-size:3em;
+    }
+    .hometexto p{
+       font-size:1.3em;
+    }
+    .contenidohome {
+        
+  top:70px;
+    }
+}
+@media screen and (max-width:700px) {
+     .contenido {
+        height:110%;
+    }
+    .homecontent {
+        top:0
+    }
+    .homelogo {
+         width:90%;
+        float:left;
+        padding:0;
+    }
+    .homelogo img{
+    width:50%;
+    margin-left:25%;
+    margin-bottom:10PX;
+    }
+    .hometexto {
+        width: 100%;
+    }
+      .hometexto h3{
+   font-size:3em;
+    }
+    .hometexto p{
+       font-size:1.5em;
+    }
+}
+@media screen and (max-width:480px) {
+
+   .hometexto {
+    float:right;
+    color:#333333;
+    background-color: rgba(255,255,255,0.5);
+    text-align: center;
+        box-sizing: border-box;
+        padding: 10px;
+        border:5px solid rgba(255,255,255,.3);
+}
+   .hometexto h3{
+   font-size:3em;
+    }
+    .hometexto p{
+       font-size:1.5em;
+    }
+     #full-screen-background-image {
+        width: 300%;
+        left: -100%;
+    }
+}

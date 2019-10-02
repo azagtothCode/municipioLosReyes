@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>MUNICIPIO DE LA PAZ</title>
+    <!-- METAS -->
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <meta http-equiv="Content-Type" content="text/html; ISO-8859-1" />
+    <meta name="DC.Language" scheme="RFC1766" content="Spanish" />
+    <link href="compartir.jpg" rel="image_src" />
+    <link rel="shortcut icon" href="ICONO2.ico" />
+    <meta name="description" content="Mantener  el  orden  y  la  paz  social  es  fundamental  para  la  Administración  Pública Municipal  2019-2021,  por  ello,  la  promulgación  y  observancia  del  Bando  Municipal constituye un sólido fundamento para promover la adecuada convivencia, el sentido de pertenencia a una colectividad, el respeto a la Ley y a la Autoridad Municipal." />
+    <meta name="KEYWORDS" content="" />
+    <meta name="Resource-type" content="Homepage" />
+    <meta name="Revisit-after" content="15 days" />
+    <meta name="Subject" content="GOBIERNO DEL MUNICIPIO DE LA PAZ." />
+    <meta name="Revisit" content="1 day" />
+    <meta name="robots" content="NoIndex,Follow" />
+    <!--CSS-->
+    <link rel="stylesheet" type="text/css" href="CSS/reset.css" />
+    <link rel="stylesheet" type="text/css" href="CSS/style.css" />
+    <link rel="stylesheet" type="text/css" href="CSS/menu_index.css" />
+    <link rel="stylesheet" type="text/css" href="CSS/general.css" />
+    <link rel="stylesheet" type="text/css" href="CSS/home.css" />
+    <link rel="stylesheet" type="text/css" href="CSS/buttons.css" />
+    <link rel="stylesheet" type="text/css" href="CSS/nosotros.css" />
+    <link rel="stylesheet" type="text/css" href="CSS/servicios.css" />
+    <link rel="stylesheet" type="text/css" href="CSS/galeria.css" />
+    <link rel="stylesheet" type="text/css" href="CSS/redes.css" />
+    <link rel="stylesheet" type="text/css" href="CSS/contacto.css" />
+    <link rel="stylesheet" type="text/css" href="CSS/pie.css" />
+    <link rel="stylesheet" type="text/css" href="CSS/hr.css" />
+    <link rel="stylesheet" type="text/css" href="CSS/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="CSS/organigrama.css" />
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif" rel="stylesheet"> 
+
+    <!--js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="jquery.jscrollpane.css" />
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"
+        type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript" src="jquery.jscrollpane.min.js"></script>
+    <script type="text/javascript" src="JS/menu.js"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function () {
+            if (!jQuery.browser.webkit) {
+                jQuery('.body').jScrollPane();
+            }
+        });
+    </script>
+    <script type="text/javascript" src="JS/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="JS/jssor.slider.min.js"></script>
+
+    <script>
+        jQuery(document).ready(function ($) {
+
+            var options = {
+                $SlideDuration: 1000,                    //[Optional] Specifies default duration (swipe) for slide in milliseconds, default value is 500
+                $DragOrientation: 3,                    //[Optional] Orientation to drag slide, 0 no drag, 1 horizental, 2 vertical, 3 either, default value is 1 (Note that the $DragOrientation should be the same as $PlayOrientation when $Cols is greater than 1, or parking position is not 0)
+                $AutoPlay: 1,                           //[Optional] Auto play or not, to enable slideshow, this option must be set to greater than 0. Default value is 0. 0: no auto play, 1: continuously, 2: stop at last slide, 4: stop on click, 8: stop on user navigation (by arrow/bullet/thumbnail/drag/arrow key navigation)
+                $Idle: 6000,                            //[Optional] Interval (in milliseconds) to go for next slide since the previous stopped if the slider is auto playing, default value is 3000
+
+                $BulletNavigatorOptions: {              //[Optional] Options to specify and enable navigator or not
+                    $Class: $JssorBulletNavigator$,     //[Required] Class to create navigator instance
+                    $ChanceToShow: 2,                   //[Required] 0 Never, 1 Mouse Over, 2 Always
+                    $Steps: 1,                          //[Optional] Steps to go for each navigation request, default value is 1
+                    $Rows: 1,                           //[Optional] Specify lanes to arrange items, default value is 1
+                    $SpacingX: 10,                      //[Optional] Horizontal space between each item in pixel, default value is 0
+                    $SpacingY: 10,                      //[Optional] Vertical space between each item in pixel, default value is 0
+                    $Orientation: 1                     //[Optional] The orientation of the navigator, 1 horizontal, 2 vertical, default value is 1
+                },
+
+                $ArrowNavigatorOptions: {
+                    $Class: $JssorArrowNavigator$,      //[Requried] Class to create arrow navigator instance
+                    $ChanceToShow: 2                    //[Required] 0 Never, 1 Mouse Over, 2 Always
+                }
+            };
+
+            var jssor_slider1 = new $JssorSlider$('slider1_container', options);
+            //make sure to clear margin of the slider container element
+            jssor_slider1.$Elmt.style.margin = "";
+
+            //#region responsive code begin
+            //the following code is to place slider in the center of parent container with no scale
+            function ScaleSlider() {
+
+                var containerElement = jssor_slider1.$Elmt.parentNode;
+                var containerWidth = containerElement.clientWidth;
+
+                if (containerWidth) {
+                    var expectedWidth = Math.min(containerWidth, jssor_slider1.$OriginalWidth());
+
+                    //scale the slider to original height with no change
+                    jssor_slider1.$ScaleSize(expectedWidth, jssor_slider1.$OriginalHeight());
+
+                    jssor_slider1.$Elmt.style.left = ((containerWidth - expectedWidth) / 2) + "px";
+                }
+                else {
+                    window.setTimeout(ScaleSlider, 30);
+                }
+            }
+
+            ScaleSlider();
+
+            $(window).bind("load", ScaleSlider);
+            $(window).bind("resize", ScaleSlider);
+            $(window).bind("orientationchange", ScaleSlider);
+            //#endregion responsive code end
+        });
+    </script>
+
+</head>
+<body class="body">
+     <header >
+         <div class="bar" style="margin-top: 0; background-color:#e0e0e0; background-image: none; height: 25px; padding-top: 7px; border-bottom: 3px solid #610011; "> 
+            <p style="top: 0; font-size: 12px; margin: 0; font-weight: normal; text-align: center; color: #610011; font-family: 'Noto Serif', serif;">LA PATRIA ES PRIMERO - VICENTE GUERRERO</p></div>
+        <div class="menu_bar">
+
+            <h6><a class="btnmenu">
+                <img src="IMAGES/GENERAL/LOGO.png" id="imgcam2" /><span class="icon-menu5"></span></a></h6>
+        </div>
+        <div class="logo">
+            <img src="IMAGES/GENERAL/LOGO.png" id="imgcam" />
+        </div>
+        <nav style="overflow: auto;">
+            <ul>
+                <li><a href="transparencia.html" class="botonm1"><span class="icon-greca1fw"></span>Transparencia</a></li>
+                <li><a href="#" class="botonm1"><span class="icon-greca1fw"></span>Organigrama</a></li>
+                 <li class="dropdown"><a href="index.html#servicios" class="botonm1 dropbtn"><span class="icon-greca1fw"></span>Tramites y Servicios</a>
+                     <div class="dropdown-content">
+                                    <a href="#"><span class="icon-greca1fw"></span>SECRETARIA</a>
+                                    <a href="#"><span class="icon-greca1fw"></span>CATASTRO</a>
+                                    <a href="#"><span class="icon-greca1fw"></span>REGLAMENTOS</a>
+                                    <a href="#"><span class="icon-greca1fw"></span>MOVILIDAD Y VÍA PÚBLICA</a>
+                                    <a href="#"><span class="icon-greca1fw"></span>DESARROLLO ECONÓMICO Y AGROPECUARIO</a>
+                                    <a href="#"><span class="icon-greca1fw"></span>DESARROLLO URBANO</a>
+                                    <a href="#"><span class="icon-greca1fw"></span>MEDIO AMBIENTE</a>
+                                    <a href="#"><span class="icon-greca1fw"></span>OFICIALIA MAYOR</a>
+                                    <a href="#"><span class="icon-greca1fw"></span>TIANGUIS</a>
+                                    <a href="#"><span class="icon-greca1fw"></span>MERCADOS</a>
+                                    <a href="#"><span class="icon-greca1fw"></span>REGISTRO CIVIL</a>
+                                    <a href="#"><span class="icon-greca1fw"></span>GONERNACIÓN</a>
+                                    <a href="#"><span class="icon-greca1fw"></span>EDUCACIÓN</a>
+                                    <a href="#"><span class="icon-greca1fw"></span>SALUD</a>
+                                </div>
+                </li>
+
+    <li class="dropdown"><a href="#social" class="botonm1 dropbtn"><span class="icon-greca1fw"></span>¿Quiénes Somos?</a>
+                             <div class="dropdown-content">
+                                    <a href="#"><span class="icon-greca1fw"></span>HISTORIA</a>
+                                    <a href="#"><span class="icon-greca1fw"></span>IDENTIDAD</a>
+                                </div>
+
+
+                
+                </li>
+
+                <li><a href="index.html#inicio" class="botonm1"><span class="icon-greca1fw"></span>Inicio</a></li>
+                <li><a href="atn_cid.html" class="botonm1"><span class="icon-greca1fw"></span>Atención Ciudadana</a></li>
+            </ul>
+        </nav>
+        <div class="bar" style="height: 25PX; padding-top: 7px; padding-right: 10px; padding-bottom: 0; width: 100%;">
+                    <p style="top: 0; font-size: 12px; margin: 0; font-weight: normal; text-align: right; color:#610011; font-family: 'Noto Serif', serif; padding-right: 10px;" ><span class="icon-greca1fw"></span>&nbsp;&nbsp;GOBIERNO Y PUEBO CAMBIO VERDADERO</p>
+        </div>
+    </header>
+
+ <div class="seccontacto" id="contact" style="margin-top: 100px;">
+            <div class="textosc">
+                <h1>CONOCE A TU FUNCIONARIO </h1>
+            </div>
+<div class="organigrama">
+    <ul>
+        <li>
+          <a href="#">H. Ayuntamiento </br> LA PAZ</a>
+            <ul>
+                <li>
+                    <a href="#">DIRECCIÓN
+                    <div class="card">
+                        <div class="perfil">
+                            <img src="IMAGES/PERFIL/ejemplo5.jpg">
+                        </div>
+                        <div class="texto">
+                            <p><strong>NOMBRE: </strong>xxx xxxx xxxxx xxxxx</p><br>
+                            <p><strong>CARGO: </strong>xxxxx xxxxx</p><br>
+                            <p><strong>XXXX: </strong>xxxxx xxxxx</p><br>
+                            <p><strong>XXXXXX: </strong>xxxxx xxxxx</p>
+
+                        </div>
+                    </div></a>
+                </li>
+                <li>
+                    <a href="#">DIRECCIÓN
+                    <div class="card">
+                        <div class="perfil">
+                            <img src="IMAGES/PERFIL/ejemplo.jpg">
+                        </div>
+                        <div class="texto">
+                            <p><strong>NOMBRE: </strong>xxx xxxx xxxxx xxxxx</p><br>
+                            <p><strong>CARGO: </strong>xxxxx xxxxx</p><br>
+                            <p><strong>XXXX: </strong>xxxxx xxxxx</p><br>
+                            <p><strong>XXXXXX: </strong>xxxxx xxxxx</p>
+
+                        </div>
+                    </div></a>
+                </li>
+                <li> <a href="#">DIRECCIÓN
+                    <div class="card">
+                        <div class="perfil">
+                            <img src="IMAGES/PERFIL/ejemplo2.jpg">
+                        </div>
+                        <div class="texto">
+                            <p><strong>NOMBRE: </strong>xxx xxxx xxxxx xxxxx</p><br>
+                            <p><strong>CARGO: </strong>xxxxx xxxxx</p><br>
+                            <p><strong>XXXX: </strong>xxxxx xxxxx</p><br>
+                            <p><strong>XXXXXX: </strong>xxxxx xxxxx</p>
+
+                        </div>
+                    </div></a></li>
+                <li> <a href="#">DIRECCIÓN
+                    <div class="card">
+                        <div class="perfil">
+                            <img src="IMAGES/PERFIL/ejemplo3.png">
+                        </div>
+                        <div class="texto">
+                            <p><strong>NOMBRE: </strong>xxx xxxx xxxxx xxxxx</p><br>
+                            <p><strong>CARGO: </strong>xxxxx xxxxx</p><br>
+                            <p><strong>XXXX: </strong>xxxxx xxxxx</p><br>
+                            <p><strong>XXXXXX: </strong>xxxxx xxxxx</p>
+
+                        </div>
+                    </div></a></li>
+                <li> <a href="#">DIRECCIÓN
+                    <div class="card">
+                        <div class="perfil">
+                            <img src="IMAGES/PERFIL/ejemplo4.jpg">
+                        </div>
+                        <div class="texto">
+                            <p><strong>NOMBRE: </strong>xxx xxxx xxxxx xxxxx</p><br>
+                            <p><strong>CARGO: </strong>xxxxx xxxxx</p><br>
+                            <p><strong>XXXX: </strong>xxxxx xxxxx</p><br>
+                            <p><strong>XXXXXX: </strong>xxxxx xxxxx</p>
+
+                        </div>
+                    </div></a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+      
+ </div>
+
+<div class="secpie"> 
+
+<div class="secinfo">
+    <div class="logo">
+        <img src="IMAGES/GENERAL/LOGOF.png" >
+    </div>
+    <div class="text"> 
+        <p><strong><span class="icon-phone2"></span> Centro de mando municipal: </strong>58564285</p>
+        <p><strong><span class="icon-phone2"></span> Bomberos: </strong>58570990</p>
+        <p><strong><span class="icon-phone2"></span> Protección civil:  </strong>58572028</p>
+        <p><strong><span class="icon-envelope"></span>  Correo Institucional Interno <br> <br> </strong>contacto@lapazedomex.com.mx</p>
+    </div>
+    <div></div>
+</div>
+<div class="secinfo2">
+ 
+    <div class="logo" >
+          <p style="font-size: 24px; margin-top: 0;
+    color: #bdbdbd;"><strong>Transparencia</strong></p>
+        <a href="https://www.plataformadetransparencia.org.mx/web/guest/inicio">Plataforma Nacional de Transparencia</a>
+        <a href="https://www.sarcoem.org.mx/sarcoem/ciudadano/login.page">sarcoem</a>
+        <a href="hhttps://www.saimex.org.mx/saimex/ciudadano/login.page">saimex</a>
+        <a href="https://www.ipomex.org.mx/ipo/lgt/indice/lapaz.web">ipomex</a>
+        <a href="transparencia.html">CONAC</a>
+        <a href="transparencia.html">Titulo IV</a>
+        <a href="transparencia.html">Titulo V</a>
+    </div>
+    <div class="text" > 
+        <p style="font-size: 24px; margin-top: 0; color:  #bdbdbd;"><strong>Enlaces externos</strong></p>
+         <a href="https://www.gob.mx/presidencia">Presidencia de la República</a>
+            <a href="http://edomex.gob.mx/">Gobierno del Estado de México</a>
+            <a href="https://www.cdmx.gob.mx/"> Gobierno de la Ciudad de México</a>
+            <a href="https://www.ine.mx/portal/">Instituto Nacional Electoral</a>
+    </div>
+    <div></div>
+</div>
+
+        <div class="sec3">
+            <p style="font-size: .8em">Copyright © 2019 Derechos Reservados. Todas las marcas, logotipos, iconos e imágenes son propiedad de sus respectivos autores y solo se utilizan con fines ilustrativos. Los precios mostrados son los totales a pagar en moneda nacional. El uso de este portal web y todos sus servicios constituye la aceptación de nuestros Términos y Condiciones. </p>
+        </div>
+    </div><div class="social">
+        <ul>
+            <li><a href="https://www.facebook.com/GMLosReyesLapaz/" target="_blank" class="icon-facebook"></a></li>
+            <li><a href="https://twitter.com/GMLosReyesLaPaz?ref_src=twsrc%5Etfw" data-show-count="false" target="_blank" class="icon-twitter"></a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></li>
+                <li><a href="#" target="_blank" class="wp"> <span class="icon-whatsapp"></span></a></li>
+            <li><a href="#" class="icon-mail"></a></li>
+        </ul>
+    </div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+.rpbi{
+	width: 100%;
+	float: left;;
+	min-height: 100px;
+	overflow: auto;
+	margin-bottom: 50px;
+}
+.rpbi > .titulo
+{
+	width: 100%;
+	min-height: 20px;
+	text-align: center;
+	background-color:#0d47a1; 
+	overflow: auto;
+} 
+.rpbi > .titulo >h1
+{
+	color: white;
+	margin-bottom: 0;
+} 
+.rpbi > .contrpbi{
+    box-sizing: border-box;
+	width: 50%;
+	float: left;
+	min-height: 100px;
+	overflow: auto;
+	padding: 25px;
+}
+.rpbi > .contrpbi > .txt{
+	width: 100%;
+	display: block;
+	color: #263238;
+	text-align: justify;
+	line-height:150%;
+}
+.rpbi > .contrpbi > .txt > strong{
+	width: 100%;
+	display: block;
+	text-align: center;
+	}
+	.rpbi > .contrpbi > .txt2{
+	width: 100%;
+	display: block;
+	color: #1a237e;
+	text-align: center;
+	font-weight: bold;
+}
+.rpbi > .contrpbi >img{
+	width: 70%;
+	margin: auto;
+	margin-left: 15%;
+}
+@media screen and (max-width:700px) {
+   .rpbi > .contrpbi{
+   	width: 100%;
+   }
+
+}

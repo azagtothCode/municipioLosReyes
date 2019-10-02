@@ -1,0 +1,132 @@
+﻿.paquetes {
+    width: 100%;
+    min-height: 100%;
+    background-color: #FFF;
+    background: url(../IMAGES/GENERAL/grapper2.png) no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    float: left;
+}
+
+.paquetes > .textoss {
+    width: 100%;
+    margin-bottom:30px;
+    color:#610011;
+}  
+.paquetes > .textoss >h1 {
+        display: block;
+        width: 80%;
+        margin: auto;
+        text-align: center;
+        padding-top:10px;
+        height: 40px;
+        font-size: 25px;
+        font-weight: normal;
+        border:1px solid #610011;
+        border-radius: 10px;
+        margin-bottom: 50px;
+    color:#610011;
+
+        /*font-size: 1.5em;
+        font-weight: 900;
+        margin: 0;
+    color:#610011;
+        text-align: center;
+        margin-bottom: 10px;*/
+    }
+    .textoss h1 {
+        font-size: 1.5em;
+        font-weight: 900;
+        margin: 0;
+        color: #1a237e;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .textoss p {
+        display: block;
+        width: 80%;
+        text-align: center;
+        margin: auto;
+        line-height: 150%;
+        font-size: .9em;
+        margin-bottom: 10px;
+    }
+
+.servicios {
+    width: 90%;
+    margin: auto;
+    overflow: auto;
+}
+
+
+.paquetes > .textosc {
+}
+
+
+    .servicios .serv {
+        width: 20%;
+        background-color: white;
+        min-height: 437px;
+        float: left;
+        margin: 2.5%;
+        border: 1px solid #610011;
+        -webkit-box-shadow: 0px 2px 19px -6px rgba(0,0,0,0.75);
+        -moz-box-shadow: 0px 2px 19px -6px rgba(0,0,0,0.75);
+        box-shadow: 0px 2px 19px -6px rgba(0,0,0,0.75);
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+        .servicios .serv h1 {
+            display: block;
+            font-size: 1em;
+            font-weight: normal;
+            text-align: center;
+            padding: 15PX;
+            background-color: #610011;
+            margin-top: 0;
+            color: white;
+        }
+
+            .servicios .serv h1 span {
+                display:block;
+                width:100%;
+                margin-bottom:15px;
+                font-size:2.5em;
+            }
+          .servicios .serv img{
+              width:80%;
+              margin-left:10%;
+              margin-bottom:10px;
+              height: 150px;
+        }    
+          .servicios .serv p{
+              display:block;
+              width:90%;
+              margin-left:5%;
+              font-size:.9em;
+              text-align:center;
+        }
+          
+@media screen and (max-width:900px) {
+  
+}
+@media screen and (max-width:850px) {
+     .servicios .serv {
+        width: 40%;
+        margin: 2.5%;
+    }
+}
+@media screen and (max-width:700px) {
+       .servicios .serv {
+        width: 90%;
+        margin: 2.5%;
+    }
+     .servicios .serv img{
+             min-height: 200px;
+        }  
+
+}

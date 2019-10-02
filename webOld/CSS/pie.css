@@ -1,0 +1,210 @@
+﻿.secpie {
+
+	box-sizing: border-box;
+   width:100%;
+min-height:50%;
+background-color:#1B1C1E;
+float:left;
+padding-left:10%;
+padding-top: 3%;
+border-top:20px solid #610011;
+}
+.secpie > .secinfo
+{
+	box-sizing: border-box;
+	width: 40%;
+	/*background-color: white;*/
+	min-height: 250px;
+	float: left;
+
+}
+.secpie > .secinfo2
+{
+	box-sizing: border-box;
+	width: 40%;
+	/*background-color: white;*/
+	min-height: 250px;
+	float: left;
+
+}
+.secpie > .secinfo > .logo
+{
+	box-sizing: border-box;
+	padding: 10px;
+	width: 40%;
+	padding-bottom: 0;
+	float: left;
+}
+.secpie > .secinfo2 > .logo
+{
+box-sizing: border-box;
+	padding: 10px;
+	width: 40%;
+	padding-bottom: 0;
+	float: left;
+	border-right:  1px solid #757575;
+	color: #bdbdbd;
+}
+.secpie > .secinfo2 > .logo >a
+{
+	display: block;
+	width: 100%;
+	padding: 5px;
+	margin-bottom: 2px;
+	font-size: 14px;
+	color: #bdbdbd;
+	text-decoration: none;
+}
+.secpie > .secinfo2 > .logo >a:hover
+{
+	border:1px solid #bdbdbd;
+}
+.secpie > .secinfo > .text  
+{
+	padding: 10px;
+	box-sizing: border-box;
+	width: 60%;
+	text-align: right;
+	float: left;
+
+	border-right:  1px solid #757575;
+}
+.secpie > .secinfo2> .text 
+{
+	padding: 10px;
+	box-sizing: border-box;
+	width: 60%;
+	text-align: left;
+	float: right;
+}
+.secpie > .secinfo > .text > p
+{
+	font-size: 14px;
+	color:  #bdbdbd;
+}
+
+.secpie > .secinfo2> .text >a
+{
+display: block;
+	width: 100%;
+	padding: 5px;
+	margin-bottom: 2px;
+	font-size: 14px;
+	color: #bdbdbd;
+	text-decoration: none;
+}
+.secpie > .secinfo2> .text >a:hover
+{
+
+	border:1px solid #bdbdbd;
+}
+.secpie > .secinfo > .logo img
+{
+	width: 100%;
+}
+.sec1{
+	width: 50%;
+	padding: 50px;
+	text-align:right;
+	box-sizing: border-box;
+	overflow: auto;
+	float: left;
+	padding-bottom: 0;
+}
+.sec1 p{
+	color: #bdbdbd;
+	font-size: .9em;
+	display: block;
+	width: 80%;
+	padding: 0;
+	float: right;
+	margin:5px;
+}
+.sec1 p span{
+	margin-right: 10px;
+	}
+.sec2{
+	width: 50%;
+	padding: 50px;
+	text-align:left;
+	box-sizing: border-box;
+	overflow: auto;
+	float: left;
+}
+.sec2 p{
+	color: #bdbdbd;
+	font-size: .9em;
+	display: block;
+	width: 80%;
+	padding: 0;
+	float: left;
+	margin:5px;
+}
+.sec2 p span{
+	margin-right: 10px;
+	}
+.sec3{
+	width: 100%;
+	padding: 50px;
+	text-align:center;
+	box-sizing: border-box;
+	overflow: auto;
+	float: left;
+}
+.sec3 p{
+	color: #bdbdbd;
+	font-size: .9em;
+	display: block;
+	width: 60%;
+	padding: 0;
+	margin:5px;
+	margin: auto;
+}
+.sec3 p span{
+	margin-right: 10px;
+	}
+@media screen and (max-width:900px) {
+  
+}
+@media screen and (max-width:850px) {
+
+.secpie > .secinfo, .secpie > .secinfo2{
+	width: 80%;
+
+}
+.secpie > .secinfo > .logo,
+.secpie > .secinfo2 > .logo
+{
+	border-right:0;
+}
+.secpie > .secinfo > .text,
+.secpie > .secinfo2 > .text
+{
+	border-right:0;
+}
+}
+@media screen and (max-width:700px) {
+.sec2,.sec1, .sec3{
+	width: 100%;
+	text-align: center;
+	float: none;
+
+   }
+   .sec2 {
+   	padding-top: 0
+   }
+.sec1 p, .sec2 p{
+	width: 100%;
+}
+.secpie > .secinfo > .logo,
+.secpie > .secinfo2 > .logo
+{
+	width: 100%;
+}
+.secpie > .secinfo > .text,
+.secpie > .secinfo2 > .text
+{
+	width: 100%;
+	text-align: justify;
+}
+}

@@ -1,0 +1,463 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>MUNICIPIO DE LA PAZ</title>
+    <!-- METAS -->
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <meta http-equiv="Content-Type" content="text/html; ISO-8859-1" />
+    <meta name="DC.Language" scheme="RFC1766" content="Spanish" />
+    <link href="compartir.jpg" rel="image_src" />
+    <link rel="shortcut icon" href="ICONO2.ico" />
+    <meta name="description" content="Mantener  el  orden  y  la  paz  social  es  fundamental  para  la  Administración  Pública Municipal  2019-2021,  por  ello,  la  promulgación  y  observancia  del  Bando  Municipal constituye un sólido fundamento para promover la adecuada convivencia, el sentido de pertenencia a una colectividad, el respeto a la Ley y a la Autoridad Municipal." />
+    <meta name="KEYWORDS" content="" />
+    <meta name="Resource-type" content="Homepage" />
+    <meta name="Revisit-after" content="15 days" />
+    <meta name="Subject" content="GOBIERNO DEL MUNICIPIO DE LA PAZ." />
+    <meta name="Revisit" content="1 day" />
+    <meta name="robots" content="NoIndex,Follow" />
+    <!--CSS-->
+    <link rel="stylesheet" type="text/css" href="CSS/reset.css" />
+    <link rel="stylesheet" type="text/css" href="CSS/style.css" />
+    <link rel="stylesheet" type="text/css" href="CSS/menu_index.css" />
+    <link rel="stylesheet" type="text/css" href="CSS/general.css" />
+    <link rel="stylesheet" type="text/css" href="CSS/home.css" />
+    <link rel="stylesheet" type="text/css" href="CSS/buttons.css" />
+    <link rel="stylesheet" type="text/css" href="CSS/nosotros.css" />
+    <link rel="stylesheet" type="text/css" href="CSS/servicios.css" />
+    <link rel="stylesheet" type="text/css" href="CSS/galeria.css" />
+    <link rel="stylesheet" type="text/css" href="CSS/redes.css" />
+    <link rel="stylesheet" type="text/css" href="CSS/contacto.css" />
+    <link rel="stylesheet" type="text/css" href="CSS/pie.css" />
+    <link rel="stylesheet" type="text/css" href="CSS/hr.css" />
+    <link rel="stylesheet" type="text/css" href="CSS/tabs.css" />
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif" rel="stylesheet"> 
+
+    <!--js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="jquery.jscrollpane.css" />
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"
+        type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript" src="jquery.jscrollpane.min.js"></script>
+    <script type="text/javascript" src="JS/menu.js"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function () {
+            if (!jQuery.browser.webkit) {
+                jQuery('.body').jScrollPane();
+            }
+        });
+    </script>
+    <script type="text/javascript" src="JS/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="JS/jssor.slider.min.js"></script>
+
+    <script>
+        jQuery(document).ready(function ($) {
+
+            var options = {
+                $SlideDuration: 1000,                    //[Optional] Specifies default duration (swipe) for slide in milliseconds, default value is 500
+                $DragOrientation: 3,                    //[Optional] Orientation to drag slide, 0 no drag, 1 horizental, 2 vertical, 3 either, default value is 1 (Note that the $DragOrientation should be the same as $PlayOrientation when $Cols is greater than 1, or parking position is not 0)
+                $AutoPlay: 1,                           //[Optional] Auto play or not, to enable slideshow, this option must be set to greater than 0. Default value is 0. 0: no auto play, 1: continuously, 2: stop at last slide, 4: stop on click, 8: stop on user navigation (by arrow/bullet/thumbnail/drag/arrow key navigation)
+                $Idle: 6000,                            //[Optional] Interval (in milliseconds) to go for next slide since the previous stopped if the slider is auto playing, default value is 3000
+
+                $BulletNavigatorOptions: {              //[Optional] Options to specify and enable navigator or not
+                    $Class: $JssorBulletNavigator$,     //[Required] Class to create navigator instance
+                    $ChanceToShow: 2,                   //[Required] 0 Never, 1 Mouse Over, 2 Always
+                    $Steps: 1,                          //[Optional] Steps to go for each navigation request, default value is 1
+                    $Rows: 1,                           //[Optional] Specify lanes to arrange items, default value is 1
+                    $SpacingX: 10,                      //[Optional] Horizontal space between each item in pixel, default value is 0
+                    $SpacingY: 10,                      //[Optional] Vertical space between each item in pixel, default value is 0
+                    $Orientation: 1                     //[Optional] The orientation of the navigator, 1 horizontal, 2 vertical, default value is 1
+                },
+
+                $ArrowNavigatorOptions: {
+                    $Class: $JssorArrowNavigator$,      //[Requried] Class to create arrow navigator instance
+                    $ChanceToShow: 2                    //[Required] 0 Never, 1 Mouse Over, 2 Always
+                }
+            };
+
+            var jssor_slider1 = new $JssorSlider$('slider1_container', options);
+            //make sure to clear margin of the slider container element
+            jssor_slider1.$Elmt.style.margin = "";
+
+            //#region responsive code begin
+            //the following code is to place slider in the center of parent container with no scale
+            function ScaleSlider() {
+
+                var containerElement = jssor_slider1.$Elmt.parentNode;
+                var containerWidth = containerElement.clientWidth;
+
+                if (containerWidth) {
+                    var expectedWidth = Math.min(containerWidth, jssor_slider1.$OriginalWidth());
+
+                    //scale the slider to original height with no change
+                    jssor_slider1.$ScaleSize(expectedWidth, jssor_slider1.$OriginalHeight());
+
+                    jssor_slider1.$Elmt.style.left = ((containerWidth - expectedWidth) / 2) + "px";
+                }
+                else {
+                    window.setTimeout(ScaleSlider, 30);
+                }
+            }
+
+            ScaleSlider();
+
+            $(window).bind("load", ScaleSlider);
+            $(window).bind("resize", ScaleSlider);
+            $(window).bind("orientationchange", ScaleSlider);
+            //#endregion responsive code end
+        });
+    </script>
+
+</head>
+<body class="body">
+     <header >
+         <div class="bar" style="margin-top: 0; background-color:#e0e0e0; background-image: none; height: 25px; padding-top: 7px; border-bottom: 3px solid #610011; "> 
+            <p style="top: 0; font-size: 12px; margin: 0; font-weight: normal; text-align: center; color: #610011; font-family: 'Noto Serif', serif;">LA PATRIA ES PRIMERO - VICENTE GUERRERO</p></div>
+        <div class="menu_bar">
+
+            <h6><a class="btnmenu">
+                <img src="IMAGES/GENERAL/LOGO.png" id="imgcam2" /><span class="icon-menu5"></span></a></h6>
+        </div>
+        <div class="logo">
+            <img src="IMAGES/GENERAL/LOGO.png" id="imgcam" />
+        </div>
+        <nav style="overflow: auto;">
+            <ul>
+                <li><a href="#" class="botonm1"><span class="icon-greca1fw"></span>Transparencia</a></li>
+                <li><a href="organigrama.html" class="botonm1"><span class="icon-greca1fw"></span>Organigrama</a></li>
+                <li class="dropdown"><a href="index.html#servicios" class="botonm1 dropbtn"><span class="icon-greca1fw"></span>Tramites y Servicios</a>
+                     <div class="dropdown-content">
+                                    <a href="#"><span class="icon-greca1fw"></span>SECRETARIA</a>
+                                    <a href="#"><span class="icon-greca1fw"></span>CATASTRO</a>
+                                    <a href="#"><span class="icon-greca1fw"></span>REGLAMENTOS</a>
+                                    <a href="#"><span class="icon-greca1fw"></span>MOVILIDAD Y VÍA PÚBLICA</a>
+                                    <a href="#"><span class="icon-greca1fw"></span>DESARROLLO ECONÓMICO Y AGROPECUARIO</a>
+                                    <a href="#"><span class="icon-greca1fw"></span>DESARROLLO URBANO</a>
+                                    <a href="#"><span class="icon-greca1fw"></span>MEDIO AMBIENTE</a>
+                                    <a href="#"><span class="icon-greca1fw"></span>OFICIALIA MAYOR</a>
+                                    <a href="#"><span class="icon-greca1fw"></span>TIANGUIS</a>
+                                    <a href="#"><span class="icon-greca1fw"></span>MERCADOS</a>
+                                    <a href="#"><span class="icon-greca1fw"></span>REGISTRO CIVIL</a>
+                                    <a href="#"><span class="icon-greca1fw"></span>GONERNACIÓN</a>
+                                    <a href="#"><span class="icon-greca1fw"></span>EDUCACIÓN</a>
+                                    <a href="#"><span class="icon-greca1fw"></span>SALUD</a>
+                                </div>
+                </li>
+
+    <li class="dropdown"><a href="#social" class="botonm1 dropbtn"><span class="icon-greca1fw"></span>¿Quiénes Somos?</a>
+                             <div class="dropdown-content">
+                                    <a href="#"><span class="icon-greca1fw"></span>HISTORIA</a>
+                                    <a href="#"><span class="icon-greca1fw"></span>IDENTIDAD</a>
+                                </div>
+
+
+                
+                </li>
+
+                <li><a href="index.html#inicio" class="botonm1"><span class="icon-greca1fw"></span>Inicio</a></li>
+                <li><a href="atn_cid.html" class="botonm1"><span class="icon-greca1fw"></span>Atención Ciudadana</a></li>
+            </ul>
+        </nav>
+        <div class="bar" style="height: 25PX; padding-top: 7px; padding-right: 10px; padding-bottom: 0; width: 100%;">
+                    <p style="top: 0; font-size: 12px; margin: 0; font-weight: normal; text-align: right; color:#610011; font-family: 'Noto Serif', serif; padding-right: 10px;" ><span class="icon-greca1fw"></span>&nbsp;&nbsp;GOBIERNO Y PUEBO CAMBIO VERDADERO</p>
+        </div>
+    </header>
+
+ <div class="seccontacto" id="contact" style="margin-top: 100px;">
+            <div class="textosc">
+                <h1>TRANSPARENCIA</h1>
+            </div>
+            <div class="tabs">
+                <div class="tab">
+                  <!--<button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">Relación de Bienes</button>
+                  <button class="tablinks" onclick="openCity(event, 'Paris')" id="defaultOpen">TITULO IV</button>
+                  <button class="tablinks" onclick="openCity(event, 'Tokyo')">TITULO V</button>-->
+                  <a href="https://www.ipomex.org.mx/ipo/lgt/indice/lapaz.web" target="_blank" class="tablinks" ><img src="IMAGES/GENERAL/logoIpomex.png" alt=""></a>
+                  
+                 <!-- <a href="http://www.losreyeslapaz.gob.mx/CONAC//" target="_blank" class="tablinks" >CONAC</a>-->
+                    <a href="https://www.saimex.org.mx/saimex/ciudadano/login.page" target="_blank" class="tablinks" ><img src="IMAGES/GENERAL/logoSaimex.png" alt=""> </a>
+                     <a href="https://www.sarcoem.org.mx/sarcoem/ciudadano/login.page" target="_blank" class="tablinks" ><img src="IMAGES/GENERAL/sarcomex.svg" alt=""> </a>
+                     <a href="https://www.plataformadetransparencia.org.mx/web/guest/inicio" target="_blank" class="tablinks" ><img src="IMAGES/GENERAL/transparencia.png" alt=""> </a>
+                  <button class="tablinks" onclick="openCity(event, 'London')" ><img src="IMAGES/GENERAL/conac.png" alt=""></button>
+               
+                </div>
+
+<!--<div id="London" class="tabcontent">
+  <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+  <h3>Relación de Bienes</h3>
+  <iframe src="https://docs.google.com/viewer?url=http://www.lapaz.aurired.com.mx/PDF/Relacion_de_bienes.pdf&embedded=true" width="100%" height="780" style="border: none;"></iframe>
+</div>-->
+<div id="Paris" class="tabcontent">
+  <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+  <h3>TITULO IV</h3>
+  <iframe src="https://docs.google.com/viewer?url=http://www.lapaz.aurired.com.mx/PDF/TITULOIV.pdf&embedded=true" width="100%" height="780" style="border: none;"></iframe>
+</div>
+
+<div id="Tokyo" class="tabcontent">
+  <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+  <h3>TITULO V</h3>
+  <iframe src="https://docs.google.com/viewer?url=http://www.lapaz.aurired.com.mx/PDF/TITULOV.pdf&embedded=true" width="100%" height="780" style="border: none;"></iframe>
+</div>
+
+<div id="London" class="tabcontent">
+  <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+ <h3> Consejo Nacional de Armonización Contable  </h3>
+
+
+<button class="accordion">2019 <span class="icon-chevron-down"></span></button>
+<div class="panel">
+    <br>
+    <strong>2DO TRIMESTRE</strong>
+   <p> <strong>TITULO V LGCG</strong>
+    <a href="PDF/2019/1ER%20TRIMESTRE/TITULO%20V%20LGCG/1.%20Car%a0tula%20de%20presupuesto%20de%20ingresos.pdf" target="_blank"><span class="icon-file-pdf"></span>1. Carátula de presupuesto de ingresos</a>
+    <a href="PDF/2019/1ER%20TRIMESTRE/TITULO%20V%20LGCG/2.%20Car%a0tula%20de%20presupuesto%20de%20egresos.pdf" target="_blank"><span class="icon-file-pdf"></span>2. Carátula de presupuesto de egresos</a>
+    <a href="PDF/2019/1ER%20TRIMESTRE/TITULO%20V%20LGCG/3.%20Acta%20de%20cabildo%20aprobaci%a2n%20del%20presupuesto%202019.pdf" target="_blank"><span class="icon-file-pdf"></span>3. Acta de cabildo aprobación del presupuesto 2019</a>
+    
+<a href="PDF/conac_sec/cp/1.pdf" target="_blank"><span class="icon-file-pdf"></span>1. Estado de situación financiera comparativo</a>
+<a href="PDF/conac_sec/cp/2.pdf" target="_blank"><span class="icon-file-pdf"></span>2. Estado de actividades comparativo</a>
+<a href="PDF/conac_sec/cp/3.pdf" target="_blank"><span class="icon-file-pdf"></span>3. Estado de variación en la hacienda pública</a>
+<a href="PDF/conac_sec/cp/4.pdf" target="_blank"><span class="icon-file-pdf"></span>4. Estado de cambios en la situación financiera</a>
+<a href="PDF/conac_sec/cp/5.pdf" target="_blank"><span class="icon-file-pdf"></span>5. Estado de flujos de efectivo</a>
+<a href="PDF/conac_sec/cp/6.pdf" target="_blank"><span class="icon-file-pdf"></span>6. Estado analitico del activo</a>
+<a href="PDF/conac_sec/cp/7.pdf" target="_blank"><span class="icon-file-pdf"></span>7. Estado analitico de la deuda y otros pasivos</a>
+<a href="PDF/conac_sec/cp/8.pdf" target="_blank"><span class="icon-file-pdf"></span>8. Notas a los estados financieros</a>
+<a href="PDF/conac_sec/cp/9.pdf" target="_blank"><span class="icon-file-pdf"></span>9. Estado analítico de ingresos</a>
+<a href="PDF/conac_sec/cp/10.pdf" target="_blank"><span class="icon-file-pdf"></span>10. Estado analítico del ejercicio del pres de egre cap y con</a>
+<a href="PDF/conac_sec/cp/11.pdf" target="_blank"><span class="icon-file-pdf"></span>11. Estado analítico del ejercicio del pres de egre clas económica</a>
+<a href="PDF/conac_sec/cp/12.pdf" target="_blank"><span class="icon-file-pdf"></span>12. Estado analítico del ejercicio del pres de egre clas admtva</a>
+<a href="PDF/conac_sec/cp/13.pdf" target="_blank"><span class="icon-file-pdf"></span>13. Estado analítico del ejercicio del pres de egre clas funcional</a>
+<a href="PDF/conac_sec/cp/14.pdf" target="_blank"><span class="icon-file-pdf"></span>14. Gasto por categoría programática</a>
+</p>
+
+</div>
+
+<button class="accordion">2019 <span class="icon-chevron-down"></span></button>
+<div class="panel">
+    <br>
+    <strong>5TO TRIMESTRE 2019</strong>
+   <p> <strong> Título IV LGCG</strong>
+    <a href="PDF/conac_sec/tl/1.pdf" target="_blank"><span class="icon-file-pdf"></span>1. EdoActividades</a>
+    <a href="PDF/conac_sec/tl/2.pdf" target="_blank"><span class="icon-file-pdf"></span>2. EdoSitFin</a>
+    <a href="PDF/conac_sec/tl/3.pdf" target="_blank"><span class="icon-file-pdf"></span>3. EdoVarHacienda</a>
+    <a href="PDF/conac_sec/tl/4.pdf" target="_blank"><span class="icon-file-pdf"></span>4. EdoCambiosSituacionFin</a>
+    <a href="PDF/conac_sec/tl/5.pdf" target="_blank"><span class="icon-file-pdf"></span>5. EdoFlujoEfectivo</a>
+    <a href="PDF/conac_sec/tl/6.pdf" target="_blank"><span class="icon-file-pdf"></span>6. Informe sobre pasivos contingentes</a>
+    <a href="PDF/conac_sec/tl/7.pdf" target="_blank"><span class="icon-file-pdf"></span>7. Notas a los estados financieros</a>
+    <a href="PDF/conac_sec/tl/8.pdf" target="_blank"><span class="icon-file-pdf"></span>8. EdoAnaliticoActivo</a>
+    <a href="PDF/conac_sec/tl/9.pdf" target="_blank"><span class="icon-file-pdf"></span>9. Edo analitico de la deuda y otros pasivos</a>
+    <a href="PDF/conac_sec/tl/10.pdf" target="_blank"><span class="icon-file-pdf"></span>10. Edo analitico de ingresos</a>
+    <a href="PDF/conac_sec/tl/11.pdf" target="_blank"><span class="icon-file-pdf"></span>11. Edo analitico del pres de egreso clas administrativa</a>
+    <a href="PDF/conac_sec/tl/12.pdf" target="_blank"><span class="icon-file-pdf"></span>12. Edo analitico del pres de egreso clas economica</a>
+    <a href="PDF/conac_sec/tl/13.pdf" target="_blank"><span class="icon-file-pdf"></span>13. Edo analitico del pres de egreso clas por objeto del gasto</a>
+    <a href="PDF/conac_sec/tl/14.pdf" target="_blank"><span class="icon-file-pdf"></span>14. Edo anailitico del pres de egreso clas funcional</a>
+    <a href="PDF/conac_sec/tl/15.pdf" target="_blank"><span class="icon-file-pdf"></span>15. Endeudamiento neto</a>
+    <a href="PDF/conac_sec/tl/16.pdf" target="_blank"><span class="icon-file-pdf"></span>16. Intereses de la deuda</a>
+    <a href="PDF/conac_sec/tl/17.pdf" target="_blank"><span class="icon-file-pdf"></span>17. Indicadores de resultados</a>
+    <a href="PDF/conac_sec/tl/18.pdf" target="_blank"><span class="icon-file-pdf"></span>18. Programas y proyectos de inversion</a>
+    <a href="PDF/conac_sec/tl/19.pdf" target="_blank"><span class="icon-file-pdf"></span>19. Gasto por categoria programatica</a>
+    <a href="PDF/conac_sec/tl/20.pdf" target="_blank"><span class="icon-file-pdf"></span>20. Aplicación de recursos FAISM 2019</a>
+    <a href="PDF/conac_sec/tl/21.pdf" target="_blank"><span class="icon-file-pdf"></span>21. Gasto federalizado</a>
+    <a href="PDF/conac_sec/tl/22.pdf" target="_blank"><span class="icon-file-pdf"></span>22. Relación de bienes</a>
+    <a href="PDF/conac_sec/tl/23.pdf" target="_blank"><span class="icon-file-pdf"></span>23. Recurso concurrente</a>
+    <a href="PDF/conac_sec/tl/24.pdf" target="_blank"><span class="icon-file-pdf"></span>24. Aplicacion de recursos FORTAMUN 2019</a>
+    <a href="PDF/conac_sec/tl/25.pdf" target="_blank"><span class="icon-file-pdf"></span>25. Aplicación de recursos a programas de seguridad pública</a>
+    <a href="PDF/conac_sec/tl/26.pdf" target="_blank"><span class="icon-file-pdf"></span>26. Obligaciones pagadas o garantizadas con fondos federales</a>
+    <a href="PDF/conac_sec/tl/27.pdf" target="_blank"><span class="icon-file-pdf"></span>27. Ayudas y subsidios</a>
+</p>
+</div>
+<!--<p> 
+    <strong> 1.- TITULO V LGCG CONAC</strong>
+    <a href="PDF/conac/2018/ingresos.pdf" target="_blank"><span class="icon-file-pdf"></span> 1. Iniciativa de Ley de Ingresos </a>
+    <a href="PDF/conac/2018/egresos.pdf" target="_blank"><span class="icon-file-pdf"></span> 2. Proyecto de Presupuesto de Egresos </a>
+    <a href="PDF/conac/2018/Presdeegreclasificacionadministrativagto.pdf" target="_blank"><span class="icon-file-pdf"></span> 2.1 Pres de egre clasificacion administrativa gto</a>
+    <a href="PDF/conac/2018/Analiticodelpresdegreclasificacionfuncional.pdf" target="_blank"><span class="icon-file-pdf"></span> 2.2 Analitico del pres de egre clasificacion funcional </a>
+    <a href="PDF/conac/2018/23.pdf" target="_blank"><span class="icon-file-pdf"></span>2.3 Analitico del pres de egresos por objeto del gto</a>
+    <a href="PDF/conac/2018/24.pdf" target="_blank"><span class="icon-file-pdf"></span>2.4 Gasto por categoria programatica</a>
+    <a href="PDF/conac/2018/25.pdf" target="_blank"><span class="icon-file-pdf"></span>2.5 Analitico de plazas</a>
+    <a href="PDF/conac/2018/30.pdf" target="_blank"><span class="icon-file-pdf"></span>3. Información de manera sencilla para difusión ciudadana</a>
+    <a href="PDF/conac/2018/40.pdf" target="_blank"><span class="icon-file-pdf"></span>4. Ingresos calendarizado</a>
+    <a href="PDF/conac/2018/50.pdf" target="_blank"><span class="icon-file-pdf"></span>5. Egresos calendarizado</a>
+    <a href="PDF/conac/2018/60.pdf" target="_blank"><span class="icon-file-pdf"></span>6. Montos pagados por ayudas y subsidios</a>
+    <a href="PDF/conac/2018/61.pdf" target="_blank"><span class="icon-file-pdf"></span>6.1 Montos pagados por ayudas y subsidios</a>
+    <a href="PDF/conac/2018/62.pdf" target="_blank"><span class="icon-file-pdf"></span>6.2 Montos pagados por ayudas y subsidios</a>
+    <a href="PDF/conac/2018/80.pdf" target="_blank"><span class="icon-file-pdf"></span>8. Carátula del Presupuesto de Ingresos (PbRM 03b)</a>
+    <a href="PDF/conac/2018/90.pdf" target="_blank"><span class="icon-file-pdf"></span>9. Carátula del Prespuesto de Egresos (PbRM 04d)</a>
+    <a href="PDF/conac/2018/100.pdf" target="_blank"><span class="icon-file-pdf"></span>10. Relación de cuentas bancarias productivas</a>
+    <a href="PDF/conac/2018/110.pdf" target="_blank"><span class="icon-file-pdf"></span>11. Aplicación de recursos federales para el FAIS</a>
+    <a href="PDF/conac/2018/120.pdf" target="_blank"><span class="icon-file-pdf"></span>12. Ejercicio y destino de gasto federalizado</a>
+    <a href="PDF/conac/2018/160.pdf" target="_blank"><span class="icon-file-pdf"></span>16. Inventario bienes inmuebles</a>
+    <a href="PDF/conac/2018/180.pdf" target="_blank"><span class="icon-file-pdf"></span>18. Programas con recursos concurrentes</a>
+    <a href="PDF/conac/2018/220.pdf" target="_blank"><span class="icon-file-pdf"></span>22. Aplicación de Recursos FORTAMUN</a>
+    <a href="PDF/conac/2018/240.pdf" target="_blank"><span class="icon-file-pdf"></span>24. Obligaciones que se pagan o garantizan con recursos federales</a>
+    <a href="PDF/conac/2018/240.pdf" target="_blank"><span class="icon-file-pdf"></span>Acta de cabildo aprovación presupuesto 2018</a>
+</p>
+<p> 
+    <strong> 2.-  ART.51 LGCG</strong>
+    <a href="PDF/conac/2018/2-10.pdf" target="_blank"><span class="icon-file-pdf"></span> 1. Edo. Actividades Acum </a>
+    <a href="PDF/conac/2018/2-20.pdf" target="_blank"><span class="icon-file-pdf"></span> 2. Edo. Sit Fin. </a>
+    <a href="PDF/conac/2018/2-30.pdf" target="_blank"><span class="icon-file-pdf"></span> 3. Edo. Var Hacienda. </a>
+    <a href="PDF/conac/2018/2-40.pdf" target="_blank"><span class="icon-file-pdf"></span> 4. Edo. Cambios Situacion Fin. </a>
+    <a href="PDF/conac/2018/2-50.pdf" target="_blank"><span class="icon-file-pdf"></span> 5. Edo. Flujo Efectivo. </a>
+    <a href="PDF/conac/2018/2-60.pdf" target="_blank"><span class="icon-file-pdf"></span> 6. Informe sobre pasivos contingentes. </a>
+    <a href="PDF/conac/2018/2-70.pdf" target="_blank"><span class="icon-file-pdf"></span> 7. Notas a los estados financieros. </a>
+    <a href="PDF/conac/2018/2-80.pdf" target="_blank"><span class="icon-file-pdf"></span> 8. Edo. Analitico Activo. </a>
+    <a href="PDF/conac/2018/2-90.pdf" target="_blank"><span class="icon-file-pdf"></span> 9. Estado analitico de la deuda y otros pasivos. </a>
+    <a href="PDF/conac/2018/2-100.pdf" target="_blank"><span class="icon-file-pdf"></span> 10. Edo. Analitico Ingresos. </a>
+    <a href="PDF/conac/2018/2-110.pdf" target="_blank"><span class="icon-file-pdf"></span> 11. Edo analitico pres de egre clasificacion administrativa gto. </a>
+    <a href="PDF/conac/2018/2-120.pdf" target="_blank"><span class="icon-file-pdf"></span> 12. Edo analitico del pres de egresos clasificacion economica. </a>
+    <a href="PDF/conac/2018/2-130.pdf" target="_blank"><span class="icon-file-pdf"></span> 13. Edo analitico del pres de egresos por objeto del gto. </a>
+    <a href="PDF/conac/2018/2-140.pdf" target="_blank"><span class="icon-file-pdf"></span> 14. Edo analitico del pres de egre clasificacion funcional. </a>
+    <a href="PDF/conac/2018/2-150.pdf" target="_blank"><span class="icon-file-pdf"></span> 15. Endeudamiento neto. </a>
+    <a href="PDF/conac/2018/2-160.pdf" target="_blank"><span class="icon-file-pdf"></span> 16. Intereses de la deuda </a>
+    <a href="PDF/conac/2018/2-170.pdf" target="_blank"><span class="icon-file-pdf"></span> 17. Gasto por categoria programatica</a>
+</p>
+<p> 
+    <strong> TITULO V LGCG CONAC 4TO TRIMESTRE 2017 </strong>
+    <a href="PDF/conac/2018/V-10.pdf" target="_blank"><span class="icon-file-pdf"></span> 1. Aplicacion de recursos FORTAMUN </a>
+    <a href="PDF/conac/2018/V-20.pdf" target="_blank"><span class="icon-file-pdf"></span> 2. Relacion de bienes que componen el patrimonio </a>
+    <a href="PDF/conac/2018/V-30.pdf" target="_blank"><span class="icon-file-pdf"></span> 3. Ejercicio y destino de gasto federalizado y reintegros</a>
+    <a href="PDF/conac/2018/V-40.pdf" target="_blank"><span class="icon-file-pdf"></span> 4. Montos pagados ayudas y subsidios</a>
+    <a href="PDF/conac/2018/V-41.pdf" target="_blank"><span class="icon-file-pdf"></span> 4.1 Montos pagados ayudas y subsidios</a>
+    <a href="PDF/conac/2018/V-42.pdf" target="_blank"><span class="icon-file-pdf"></span> 4.2 Montos pagados ayudas y subsidios</a>
+    <a href="PDF/conac/2018/V-50.pdf" target="_blank"><span class="icon-file-pdf"></span> 5. Obligaciones pagadas o garantizadas con fondos federales</a>
+    <a href="PDF/conac/2018/V-60.pdf" target="_blank"><span class="icon-file-pdf"></span> 6. Obras y acciones realizadas con el FAIS</a>
+    <a href="PDF/conac/2018/V-70.pdf" target="_blank"><span class="icon-file-pdf"></span> 7. Recursos asignados a programas de seguridad publica</a>
+    <a href="PDF/conac/2018/V-80.pdf" target="_blank"><span class="icon-file-pdf"></span> 8. Recursos por orden de gobierno</a>
+</p>
+<p> 
+    <strong> Tercer trimestre 2018 </strong>
+    <a href="PDF/conac/2018/T3-10.pdf" target="_blank"><span class="icon-file-pdf"></span> 6. Montos pagados por ayudas y subsidios corriente</a>
+    <a href="PDF/conac/2018/T3-61.pdf" target="_blank"><span class="icon-file-pdf"></span> 6.1 Adultos mayores  MAY DIC 2018</a>
+    <a href="PDF/conac/2018/T3-61-1.pdf" target="_blank"><span class="icon-file-pdf"></span> 6.1 Complemento adultos mayores JUL DIC 2018</a>
+    <a href="PDF/conac/2018/T3-62.pdf" target="_blank"><span class="icon-file-pdf"></span> 6.2 Educaci¨®n basica JUL- DIC 18 ECONO</a>
+    <a href="PDF/conac/2018/T-63.pdf" target="_blank"><span class="icon-file-pdf"></span> 6.3 Capacidades diferentes JUL-DIC.18</a>
+    <a href="PDF/conac/2018/T3-70.pdf" target="_blank"><span class="icon-file-pdf"></span> 7. Ejercicio y destino de gasto federalizado y reintegros</a>
+    <a href="PDF/conac/2018/T3-80.pdf" target="_blank"><span class="icon-file-pdf"></span> 8. Obligaciones pagadas o garantizadas con fondos federales</a>
+    <a href="PDF/conac/2018/T3-90.pdf" target="_blank"><span class="icon-file-pdf"></span> 9. Recursos concurrentes por orden de gobierno</a>
+    <a href="PDF/conac/2018/T3-130.pdf" target="_blank"><span class="icon-file-pdf"></span> 13. Recursos asignados a seguridad pública</a>
+    <a href="PDF/conac/2018/T3-140.pdf" target="_blank"><span class="icon-file-pdf"></span> 14. Aplicación de recursos del FORTAMUN</a>
+    <a href="PDF/conac/2018/T3-150.pdf" target="_blank"><span class="icon-file-pdf"></span> 15. Relación de bienes que componen el patrimonio</a>
+</p>
+</div>
+
+<button class="accordion">2017 <span class="icon-chevron-down"></span></button>
+<div class="panel">
+   <p><a href="PDF/conac/2017/1ertri.pdf" target="_blank"><span class="icon-file-pdf"></span> 1er. Trimestre </a>
+    <a href="PDF/conac/2017/2dotri.pdf" target="_blank"><span class="icon-file-pdf"></span> 2do. Trimestre </a>
+<a href="PDF/conac/2017/3ertri.pdf" target="_blank"><span class="icon-file-pdf"></span> 3er. Trimestre </a>
+<a href="PDF/conac/2017/4totri.pdf" target="_blank"><span class="icon-file-pdf"></span> 4to. Trimestre </a>
+<a href="PDF/conac/2017/4totri.pdf" target="_blank"><span class="icon-file-pdf"></span> 5to. Trimestre </a></p>
+</div>
+
+<button class="accordion">2016 <span class="icon-chevron-down"></span></button>
+<div class="panel">
+  <p><a href="PDF/conac/2016/1ertri.pdf" target="_blank"><span class="icon-file-pdf"></span> 1er. Trimestre </a>
+    <a href="PDF/conac/2016/2dotri.pdf" target="_blank"><span class="icon-file-pdf"></span> 2do. Trimestre </a>
+<a href="PDF/conac/2016/3ertri.pdf" target="_blank"><span class="icon-file-pdf"></span> 3er. Trimestre </a>
+<a href="PDF/conac/2016/4totri.pdf" target="_blank"><span class="icon-file-pdf"></span> 4to. Trimestre </a></p>
+</div>
+
+
+<button class="accordion">2015 <span class="icon-chevron-down"></span></button>
+<div class="panel">
+  <p><a href="PDF/conac/2015/4totri.pdf" target="_blank"><span class="icon-file-pdf"></span> 4to. Trimestre </a></p>
+</div>
+  
+</div>-->
+
+
+</div>
+
+      
+        </div>
+
+<div class="secpie"> 
+
+<div class="secinfo">
+    <div class="logo">
+        <img src="IMAGES/GENERAL/LOGOF.png" >
+    </div>
+    <div class="text"> 
+        <p><strong><span class="icon-phone2"></span> Centro de mando municipal: </strong>58564285</p>
+        <p><strong><span class="icon-phone2"></span> Bomberos: </strong>58570990</p>
+        <p><strong><span class="icon-phone2"></span> Protección civil:  </strong>58572028</p>
+        <p><strong><span class="icon-envelope"></span>  Correo Institucional Interno <br> <br> </strong>contacto@lapazedomex.com.mx</p>
+    </div>
+    <div></div>
+</div>
+<div class="secinfo2">
+    <div class="logo" >
+          <p style="font-size: 24px; margin-top: 0;
+    color: #bdbdbd;"><strong>Transparencia</strong></p>
+        <a href="https://www.plataformadetransparencia.org.mx/web/guest/inicio">Plataforma Nacional de Transparencia</a>
+        <a href="https://www.sarcoem.org.mx/sarcoem/ciudadano/login.page">sarcoem</a>
+        <a href="hhttps://www.saimex.org.mx/saimex/ciudadano/login.page">saimex</a>
+        <a href="https://www.ipomex.org.mx/ipo/lgt/indice/lapaz.web">ipomex</a>
+        <a href="transparencia.html">CONAC</a>
+        <a href="transparencia.html">Titulo IV</a>
+        <a href="transparencia.html">Titulo V</a>
+    </div>
+    <div class="text" > 
+        <p style="font-size: 24px; margin-top: 0; color:  #bdbdbd;"><strong>Enlaces externos</strong></p>
+         <a href="https://www.gob.mx/presidencia">Presidencia de la República</a>
+            <a href="http://edomex.gob.mx/">Gobierno del Estado de México</a>
+            <a href="https://www.cdmx.gob.mx/"> Gobierno de la Ciudad de México</a>
+            <a href="https://www.ine.mx/portal/">Instituto Nacional Electoral</a>
+    </div>
+    <div></div>
+</div>
+
+        <div class="sec3">
+            <p style="font-size: .8em">Copyright © 2019 Derechos Reservados. Todas las marcas, logotipos, iconos e imágenes son propiedad de sus respectivos autores y solo se utilizan con fines ilustrativos. Los precios mostrados son los totales a pagar en moneda nacional. El uso de este portal web y todos sus servicios constituye la aceptación de nuestros Términos y Condiciones. </p>
+        </div>
+    </div>
+ <div class="social">
+        <ul>
+            <li><a href="https://www.facebook.com/GMLosReyesLapaz/" target="_blank" class="icon-facebook"></a></li>
+            <li><a href="https://twitter.com/GMLosReyesLaPaz?ref_src=twsrc%5Etfw" data-show-count="false" target="_blank" class="icon-twitter"></a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></li>
+                <li><a href="#" target="_blank" class="wp"> <span class="icon-whatsapp"></span></a></li>
+            <li><a href="#" class="icon-mail"></a></li>
+        </ul>
+    </div>
+
+
+
+<script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
+
+</body>
+</html>

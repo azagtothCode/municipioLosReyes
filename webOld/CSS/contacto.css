@@ -1,0 +1,103 @@
+﻿.seccontacto {
+    width: 100%;
+    min-height: 115%;
+    background: url(../IMAGES/GENERAL/grapper4.png) no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    float: left;
+    padding-top: 100PX;
+    overflow: auto;
+}
+.textosc {
+    width: 100%;
+    margin-bottom:30px;
+    color:#610011;
+}
+
+    .textosc h1 {
+        display: block;
+        width: 80%;
+        margin: auto;
+        text-align: center;
+        padding-top:10px;
+        height: 40px;
+        font-size: 25px;
+        font-weight: normal;
+        border:1px solid #610011;
+        border-radius: 10px;
+        margin-bottom: 50px;
+
+        /*font-size: 1.5em;
+        font-weight: 900;
+        margin: 0;
+    color:#610011;
+        text-align: center;
+        margin-bottom: 10px;*/
+    }
+
+    .textosc p {
+        display: block;
+        width: 80%;
+        text-align: center;
+        margin: auto;
+        line-height: 150%;
+        font-size: 1em;
+        margin-bottom: 10px;
+        color:#263238;
+    }
+.formulario {
+    width:40%;
+    float:left;
+    margin-left:5%;
+    margin-right:5%;
+}
+.formulario div form
+{
+	width: 90%;
+	margin-left: 5%;
+}
+.formulario div form input[type=text], textarea
+{	
+     transition:all .5s ease-in-out;
+	width: 100%;
+	height: 25px;
+	margin-bottom: 10px;
+	padding: 3px;
+	font-size: 1em;
+	border-bottom:  1px;
+	border-style: solid;
+	border-color: #bdbdbd;
+    border-radius:3px;
+	background-color: white;
+}
+    .formulario div form textarea {
+        transition: all .5s ease-in-out;
+        width: 99%;
+        height: 200px;
+        margin-bottom: 10px;
+        padding: 5px;
+        font-size: 1em;
+        border-style: solid;
+    }
+    @media screen and (max-width:900px) {
+  
+}
+@media screen and (max-width:850px) {
+       
+.formulario {
+    width:60%;
+    float:left;
+    margin-left:20%;
+    margin-right:20%;
+}
+}
+@media screen and (max-width:700px) {
+.formulario {
+    width:90%;
+    float:left;
+    margin-left:5%;
+    margin-right:5%;
+}
+
+}
