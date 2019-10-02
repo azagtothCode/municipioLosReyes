@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="../css/styles.css" >
+  <link rel="icon" href="../imgs/menu.png" type="image/gif" sizes="16x16">
+  <title>Los Reyes la Paz</title>
+</head>
+<body>
+  <div class="menuContainer"></div>
+
+  <div class="container-fluid" style="background:#60000F; min-height:200px; padding-top:50px; text-align: center;">
+    <h1 style="color:#FFF; letter-spacing:2px;">Transparencia</h1>
+    <span style="color:#FFF;">
+        En esta sección podrás encontrar informacion relevante a Transparencia
+    </span>
+  </div>
+  <div class="container" style="padding-top:50px;">
+    <div class="row" >
+        <div class="col-3">
+            <a class="btn btn-primary" href="https://www.ipomex.org.mx/ipo/lgt/indice/lapaz.web" target="_blank" role="button"><img  src="../imgs/ipomex.png"></a>
+        </div>
+        <div class="col-3">
+            <a class="btn btn-primary" href="https://www.saimex.org.mx/saimex/ciudadano/login.page" target="_blank" role="button"> <img src="../imgs/logoSaimex.png" ></a>
+        </div>
+        <div class="col-3">
+            <a class="btn btn-primary" href="https://www.sarcoem.org.mx/sarcoem/ciudadano/login.page" target="_blank" role="button"><img src="../imgs/sarcoem.png" ></a>
+        </div>
+        <div class="col-3">           
+            <a class="btn btn-primary" href="https://www.plataformadetransparencia.org.mx/web/guest/inicio" target="_blank" role="button"><img src="../imgs/transparencia.png"></a>
+        </div>
+    </div>
+    <div class="row" style="padding-top:50px; padding-bottom:50px;">
+        <div class="col-3">
+            <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                <img src="../imgs/conac.png">
+            </a>
+        </div>
+        <div class="col-3">
+            <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                <img src="../imgs/datos.png">
+            </a>
+        </div>
+        <div class="col-3">
+            <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                <img src="../imgs/gaceta.jpg">
+            </a>
+        </div>
+        <div class="col-3">           
+            <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                <img src="../imgs/pub.PNG">
+            </a>
+        </div>
+    </div>
+      <div class="collapse" id="collapseExample">
+        <div class="card card-body">
+          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+        </div>
+      </div>
+  </div>
+
+  <div class="footerOtherSites"></div>
+</body>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script>
+  $(document).ready(function () {
+    $('.menuContainer').load('./menu.html');
+    $('.footerOtherSites').load('./footer.html');
+  });
+
+  var w = window.innerWidth
+  || document.documentElement.clientWidth
+  || document.body.clientWidth;
+
+  var h = window.innerHeight
+  || document.documentElement.clientHeight
+  || document.body.clientHeight;
+
+  var x = document.getElementById("bodyPage");
+
+  if(w>991){
+    // Detectamos cuando el usuario desplace la pantalla
+    window.onscroll = function (){
+        // Obtenemos la posicion del scroll en pantall
+        var scroll = document.documentElement.scrollTop || document.body.scrollTop;
+        var elemento = document.getElementById("navPrincipal");
+
+        // Realizamos alguna accion cuando el scroll este entre la posicion 300 y 400
+        if(scroll > 106){
+            elemento.className = "container-fluid topnavFixed";
+        }else {
+          elemento.className = "container topnav";
+        }
+    }
+  }
+
+  if(w<=991){
+    var elementoContainer = document.getElementById("contentSm");
+    elementoContainer.className = "container-fluid fixed-top";
+
+  }
+
+</script>
+</html>
