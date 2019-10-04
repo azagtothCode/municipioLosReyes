@@ -111,7 +111,7 @@
           <div class="row">
             <div class="col-12" ng-repeat="a in noticesI | orderBy : '-fechaNoticia'">
               <a href="noticia.php?notice={{ a.idNoticia }}" target="_blank" class="card-link">
-                <div id="content-photo-notice-inline" class="card "  style="margin-bottom:10px; ">
+                <div id="content-photo-notice-inline" class="card" style="margin-bottom:10px; ">
                   <div class="containerImg">
                     <img class="imageNotice" src="../imgs/{{a.imgNoticia }}" class="card-img-top" alt="...">
                     <div class="card-body overlay">
@@ -130,31 +130,31 @@
       <div class="container">
         <div id="rowFooter" class="row">
           <div class="col-xl-4 col-lg-4 col-md-5 col-sm-7 col-12">
-              <p style="font-weight: bold;">ATENCIÓN CIUDADANA</br></br>
-                <a id="linksFooter" href="" >Centro de mando municipal: 58564285</a></br>
-                <a id="linksFooter" href="" >Bomberos: 58570990</a> </br>
-                <a id="linksFooter" href="" >Protección civil: 58572028</a> </br>
+              <p style="font-weight: bold;">ATENCIÓN CIUDADANA<br><br>
+                <a id="linksFooter" href="" >Centro de mando municipal: 58564285</a><br>
+                <a id="linksFooter" href="" >Bomberos: 58570990</a> <br>
+                <a id="linksFooter" href="" >Protección civil: 58572028</a> <br>
               </p>
           </div>
           <div class="col-xl-4 col-lg-4 col-md-4 col-sm-5 col-12">
-            <p style="font-weight: bold;">ENLACES EXTERNOS</br></br>
-              <a id="linksFooter" href="https://www.gob.mx/presidencia" target="_blank">Presidencia de la República</a></br>
-              <a id="linksFooter" href="http://edomex.gob.mx/" target="_blank">Gobierno del Estado de Mexico</a> </br>
-              <a id="linksFooter" href="https://www.ine.mx/" target="_blank">Instituto Nacional Electoral</a> </br>
+            <p style="font-weight: bold;">ENLACES EXTERNOS<br><br>
+              <a id="linksFooter" href="https://www.gob.mx/presidencia" target="_blank">Presidencia de la República</a><br>
+              <a id="linksFooter" href="http://edomex.gob.mx/" target="_blank">Gobierno del Estado de Mexico</a> <br>
+              <a id="linksFooter" href="https://www.ine.mx/" target="_blank">Instituto Nacional Electoral</a> <br>
             </p>
           </div>
           <div class="col-xl-4 col-lg-4 col-md-3 col-sm-7 col-12">
-            <p style="font-weight: bold;">TRANSPARENCIA</br></br>
-              <a id="linksFooter" href="https://www.plataformadetransparencia.org.mx/web/guest/inicio" target="_blank">Plataforma Nacional de Transparencia</a></br>
-              <a id="linksFooter" href="https://www.sarcoem.org.mx/sarcoem/ciudadano/login.page" target="_blank">SARCOEM</a></br>
-              <a id="linksFooter" href="hhttps://www.saimex.org.mx/saimex/ciudadano/login.page" target="_blank">SAIMEX</a></br>
-              <a id="linksFooter" href="https://www.ipomex.org.mx/ipo/lgt/indice/lapaz.web" target="_blank">IPOMEX</a></br>
-              <a id="linksFooter" href="" >CONAC</a></br>
-              <a id="linksFooter" href="" >TITULO IV</a></br>
-              <a id="linksFooter" href="" >TITULO V</a></br>
-              <a id="linksFooter" href="http://www.lapazopdapas.gob.mx">OPDAPAS La Paz</a></br>
-              <a id="linksFooter" href="http://www.diflapaz.gob.mx/">DIF Municipal La Paz</a></br>
-              <a id="linksFooter" href="http://www.imcufidelapaz.gob.mx/">IMCUFIDE La Paz</a></br>
+            <p style="font-weight: bold;">TRANSPARENCIA<br><br>
+              <a id="linksFooter" href="https://www.plataformadetransparencia.org.mx/web/guest/inicio" target="_blank">Plataforma Nacional de Transparencia</a><br>
+              <a id="linksFooter" href="https://www.sarcoem.org.mx/sarcoem/ciudadano/login.page" target="_blank">SARCOEM</a><br>
+              <a id="linksFooter" href="hhttps://www.saimex.org.mx/saimex/ciudadano/login.page" target="_blank">SAIMEX</a><br>
+              <a id="linksFooter" href="https://www.ipomex.org.mx/ipo/lgt/indice/lapaz.web" target="_blank">IPOMEX</a><br>
+              <a id="linksFooter" href="" >CONAC</a><br>
+              <a id="linksFooter" href="" >TITULO IV</a><br>
+              <a id="linksFooter" href="" >TITULO V</a><br>
+              <a id="linksFooter" href="http://www.lapazopdapas.gob.mx">OPDAPAS La Paz</a><br>
+              <a id="linksFooter" href="http://www.diflapaz.gob.mx/">DIF Municipal La Paz</a><br>
+              <a id="linksFooter" href="http://www.imcufidelapaz.gob.mx/">IMCUFIDE La Paz</a><br>
             </p>
           </div>
           <div class="col-xl-4 col-lg-4 col-md-5 col-sm-5 col-12" >
