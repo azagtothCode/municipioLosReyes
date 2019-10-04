@@ -113,7 +113,7 @@
               <a href="noticia.php?notice={{ a.idNoticia }}" target="_blank" class="card-link">
                 <div id="content-photo-notice-inline" class="card "  style="margin-bottom:10px; ">
                   <div class="containerImg">
-                    <img class="image" src="../imgs/{{a.imgNoticia }}" class="card-img-top" alt="...">
+                    <img class="imageNotice" src="../imgs/{{a.imgNoticia }}" class="card-img-top" alt="...">
                     <div class="card-body overlay">
                       <p class="card-text">{{ a.tituloNoticia }}</p>
                     </div>
@@ -296,16 +296,17 @@
     if(w>991){
       // Detectamos cuando el usuario desplace la pantalla
       window.onscroll = function (){
-          // Obtenemos la posicion del scroll en pantall
-          var scroll = document.documentElement.scrollTop || document.body.scrollTop;
-          var elemento = document.getElementById("navPrincipal");
 
-          // Realizamos alguna accion cuando el scroll este entre la posicion 300 y 400
-          if(scroll > 106){
-              elemento.className = "container-fluid topnavFixed";
-          }else {
-            elemento.className = "container topnav";
-          }
+        // Obtenemos la posicion del scroll en pantalla
+        var scroll = document.documentElement.scrollTop || document.body.scrollTop;
+        var elemento = document.getElementById("navPrincipal");
+
+        // Realizamos alguna accion cuando el scroll este entre la posicion 300 y 400
+        if(scroll > 106){
+            elemento.className = "container-fluid topnavFixed";
+        }else {
+          elemento.className = "container topnav";
+        }
       }
     }
 
