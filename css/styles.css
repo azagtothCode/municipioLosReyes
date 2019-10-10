@@ -399,6 +399,15 @@ li{
   margin-bottom:15px; 
 }
 
+#pdfTransparence{
+  padding: 5px; 
+  color:red;
+}
+
+.pdfLink a{
+  color: #000;
+  text-decoration: none;
+}
 
 
 /* MEDIA SCREEN */
