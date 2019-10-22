@@ -84,19 +84,18 @@
                     <a id="linkInicio" class="nav-link" href="whoPages/organigrama.html" target="_blank">Cabildo</a>
                   </li>
                   <li class="nav-item">
-                    <!--<a id="linkInicio" class="nav-link" data-toggle="modal" href="" data-target="#linkModalT">Transparencia</a>-->
                     <a id="linkInicio" class="nav-link" href="whoPages/transparence.html" target="_blank">Transparencia</a>
                   </li>
                   <li class="nav-item dropdown">
-                      <a class="nav-link dropdown-toggle" href="#WhoIs" id="linkInicio" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          Mejora Regulatoria
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                          <a class="dropdown-item" href="" target="_blank">Catalogo Municipal de Regulaciones</a>
-                          <a class="dropdown-item" href="" target="_blank">Registro Municipal de Tramites y Servicios</a>
-                          <a class="dropdown-item" href="" target="_blank">Protesta Ciudadana</a>
-                          <a class="dropdown-item" href="" target="_blank">Consulta Pública</a>
-                        </div>
+                    <a class="nav-link dropdown-toggle" href="#WhoIs" id="linkInicio" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Mejora Regulatoria
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item" href="" target="_blank">Catalogo Municipal de Regulaciones</a>
+                      <a class="dropdown-item" href="" target="_blank">Registro Municipal de Tramites y Servicios</a>
+                      <a class="dropdown-item" href="" target="_blank">Protesta Ciudadana</a>
+                      <a class="dropdown-item" href="" target="_blank">Consulta Pública</a>
+                    </div>
                   </li>
                 </ul>
               </div>
@@ -104,7 +103,8 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> 
+  <div class="menuContainer"></div>    
     <!-- Slider content -->
     <div  id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
       <ol class="carousel-indicators">
@@ -114,10 +114,10 @@
       </ol>
       <div class="carousel-inner" role="listbox">
         <div class="carousel-item active">
-          <!-- <img src="imgs/s1.jpg" class="d-block w-100" alt="..."> -->
-          <video style="width: 100%;" class="video-fluid" autoplay loop>
+          <img src="imgs/camionBasura.jpg" class="d-block w-100" alt="...">
+          <!-- <video style="width: 100%;" class="video-fluid" autoplay loop>
               <source src="multimedia/obrasweb.mp4" class="d-block w-100" type="video/mp4" />
-          </video>
+          </video> -->
         </div>
         <div class="carousel-item">
           <img src="imgs/s5.jpg" class="d-block w-100" alt="...">
@@ -138,25 +138,20 @@
     <!-- Notices content -->
     <div class="container"  ng-controller="customersCtrl" >
       <h1 class="titleSite">Noticias</h1>
-      <!-- <div class="jumbotron noticesJumb">
-        <h1 style="color:#FFF;" >El Gobierno Municipal de La Paz, Administración 2019-2021, compra una
-            retroexcavadora para brindar servicios de calidad a los habitantes de La
-            Paz.</h1>
-        <a class="btn btn-primary btn-lg" href="#" role="button">Ver más</a>
-      </div> -->
       <div class="card-deck" >
         <div class="row">
-          <div class="col-4" ng-repeat="a in names | limitTo : 6 | orderBy : '-fechaNoticia'">
+          <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-4 " ng-repeat="a in notices | limitTo : 6 | orderBy : 'fechaNoticia':true">
             <div class="card"  style="margin-bottom:10px; ">
-              <img src="imgs/{{a.imgNoticia }}" class="card-img-top" alt="...">
+              <img src="imgs/{{a.imgNoticia }}" class="card-img-top imgNoticeIndex" alt="...">
               <div class="card-body">
                 <!-- <h5 class="card-title">BOLETIN DE PRENSA</h5> -->
-                <p class="card-text">{{ a.tituloNoticia }}</p>
-              </div>
-              <div class="card-footer">
-                <a  class="card-link">{{ a.fechaNoticia }}</a>
+                <p style="text-transform: capitalize;" class="card-text">{{ a.tituloNoticia.substr(0,70)}}... 
                 <a href="notices/noticia.php?notice={{ a.idNoticia }}" target="_blank" class="card-link">Ver más</a>
+                </p>
               </div>
+              <!-- <div class="card-footer">
+                <a  class="card-link">{{ a.fechaNoticia }}</a>
+              </div> -->
             </div>
           </div>
         </div>
@@ -168,7 +163,7 @@
     </div>
     <div id="HeightDiv" class="container overflow-hidden containerServices" ng-controller="myCtrl">
       <div class="row rowServices"  >
-        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12" ng-repeat="x in records" style="padding: 10px;">
+        <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12" ng-repeat="x in records" style="padding: 10px;">
           <div class="card">
             <div class="row no-gutters">
                 <div class="col-md-2">
@@ -195,47 +190,22 @@
         <span id="textButtonList">Mostrar más Servicios <i id="" class="fa fa-caret-square-o-down"></i></span><br>
       </button>
     </div>
-    <!-- Gaceta content -->
-    <!-- <div class="container">
-      <div class="column" >
-        <h1 class="titleSite">Gaceta Municipal</h1>
-
-        <div class="row" >
-          <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
-            <a class="btn btn-primary" href="http://www.losreyeslapaz.gob.mx/PDF/gaceta1.pdf"  target="_blank" role="button" style="width: 100%">ENERO - FEBREO 2019</a>
-          </div>
-          <div id="colServices" class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
-            <a class="btn btn-primary" href="http://www.losreyeslapaz.gob.mx/PDF/gaceta2.pdf"  target="_blank" role="button"style="width: 100%" >MARZO 2019</a>
-          </div>
-        </div>
-      </div>
-      <div class="column" >
-        <h1 class="titleSite">Publicaciones y Comunicados</h1>
-        <div class="row" >
-            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
-                <a class="btn btn-primary" href="http://www.losreyeslapaz.gob.mx/PDF/lineamientosprogamas.pdf"  target="_blank" role="button" style="width: 100%">Lineamientos Generales</a>
-            </div>
-            <div id="colServices" class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
-                <a class="btn btn-primary" href="http://www.losreyeslapaz.gob.mx/PDF/PAE2019LaPaz.pdf" role="button"style="width: 100%" target="_blank" >PAE 2019 LA PAZ</a>
-            </div>
-          </div>
-      </div>
-    </div> -->
     <!-- Socials Content -->
     <div class="container">
       <div class="column" >
         <h1 class="titleSite">Redes Sociales</h1>
         <div class="row" >
-          <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+          <div id="rowFacebook" class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
             <div style="max-width: 100%;" class="fb-page" data-adapt-container-width="true" data-hide-cover="false" data-href="https://www.facebook.com/GMLosReyesLapaz/" data-show-facepile="true" data-small-header="false" data-tabs="timeline" data-width="500" data-height="550">
               <blockquote cite="https://www.facebook.com/GMLosReyesLapaz/" class="fb-xfbml-parse-ignore">
                 <a href="https://www.facebook.com/GMLosReyesLapaz/">Gobierno Municipal Los Reyes La Paz 2019-2021</a>
               </blockquote>
             </div>
           </div>
-          <div  class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12" >
+          <div id="rowTwitter" class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12" >
             <div style=" overflow: auto; max-height: 550px;">
-            <a class="twitter-timeline" href="https://twitter.com/GMLosReyesLaPaz?ref_src=twsrc%5Etfw">Tweets by GMLosReyesLaPaz</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></div>
+              <a class="twitter-timeline" href="https://twitter.com/GMLosReyesLaPaz?ref_src=twsrc%5Etfw">Tweets by GMLosReyesLaPaz</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </div>
           </div>
         </div>
       </div>
@@ -246,25 +216,24 @@
         <h1 class="titleSite">Contactanos</h1>
         <div class="row" >
             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
-              <form>
+              <form action="connections/mail.php" method="post">
                 <div class="form-group">
                   <label for="formGroupExampleInput">Nombre</label>
-                  <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Su nombre">
+                  <input name="nameUserContact" type="text" class="form-control" id="formGroupExampleInput" placeholder="Su nombre">
                 </div>
                 <div class="form-group">
                   <label for="formGroupExampleInput2">Correo Electronico</label>
-                  <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="sucorreo@gmail.com">
+                  <input name="mailUserContact" type="text" class="form-control" id="formGroupExampleInput2" placeholder="sucorreo@gmail.com">
                 </div>
                 <div class="form-group">
                   <label for="formGroupExampleInput2">Telefono</label>
-                  <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Su telefono">
+                  <input name="telUserContact" type="text" class="form-control" id="formGroupExampleInput2" placeholder="Su telefono">
                 </div>
                 <div class="form-group">
                   <label for="exampleFormControlTextarea1">Mensaje</label>
-                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                  <textarea style="width:100%;" name="bodyMsgContact" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                 </div>
                 <button type="submit" class="btn btn-primary">Enviar</button>
-
               </form>
 
             </div>
@@ -365,16 +334,19 @@
             </button>
           </div>
           <div class="modal-body">
-            <form>
+            <form action="connections/mail.php" method="post">
               <div class="form-group">
-                <textarea class="form-control" id="message-text" placeholder="Presenta tu duda, opinión o comentarios, y haz valer el derecho de dirigirte respetuosamente a cualquier funcionario público."></textarea>
+                <textarea class="form-control" name="bodyMsg" id="message-text" placeholder="Presenta tu duda, opinión o comentarios, y haz valer el derecho de dirigirte respetuosamente a cualquier funcionario público."></textarea>
+                <br>
+                <input type="text" name="mailUser" class="form-control" placeholder="Correo Electronico" aria-label="Username" aria-describedby="basic-addon1">
+              </div>
+              <div class="modal-footer">
+                  <button type="submit" class="btn btn-primary">Enviar</button>
               </div>
             </form>
           </div>
           <span style="text-align: center; padding: 10px;"> Escribe el asunto de tu petición y da clic en Enviar para recibir una respuesta específica.</span>
-          <div class="modal-footer">
-            <a href="mailto:atencionciudadana@losreyeslapaz.gob.mx" class="btn btn-lg" role="button" aria-disabled="true">Enviar</a>
-          </div>
+
         </div>
       </div>
     </div>
@@ -428,66 +400,60 @@
       </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
-    <!-- Optional JavaScript -->
-    <script>
-
-    var w = window.innerWidth
-    || document.documentElement.clientWidth
-    || document.body.clientWidth;
-
-    var h = window.innerHeight
-    || document.documentElement.clientHeight
-    || document.body.clientHeight;
-
-    var x = document.getElementById("bodyPage");
-
-    if(w>991){
-      // Detectamos cuando el usuario desplace la pantalla
-      window.onscroll = function (){
-          // Obtenemos la posicion del scroll en pantall
-          var scroll = document.documentElement.scrollTop || document.body.scrollTop;
-          var elemento = document.getElementById("navPrincipal");
-
-          // Realizamos alguna accion cuando el scroll este entre la posicion 300 y 400
-          if(scroll > 106){
-              elemento.className = "container-fluid topnavFixed";
-          }else {
-            elemento.className = "container topnav";
-          }
-      }
-    }
-
-    if(w<=991){
-      var elementoContainer = document.getElementById("contentSm");
-      elementoContainer.className = "container-fluid fixed-top";
-
-    }
-
-    function changeHeightDiv() {
-
-      var res;
-      currentvalue = document.getElementById('onoff').value;
-        if(currentvalue == "Off"){
-          res= document.getElementById("onoff").value="On";
-          console.log(res)
-          document.getElementById("HeightDiv").style.height="200px";
-          document.getElementById("textButtonList").innerHTML = 'Mostrar más Servicios <i id="" class="fa fa-caret-square-o-down"></i>';
-
-        }else{
-          res=document.getElementById("onoff").value="Off";
-          console.log(res)
-          document.getElementById("HeightDiv").style.height="auto";
-          document.getElementById("textButtonList").innerHTML = 'Mostrar menos Servicios <i id="" class="fa fa-caret-square-o-up"></i>';
-
-        }
-    }
-    </script>
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="js/servicesCtrl.js"></script>
+    <script>
 
+        var w = window.innerWidth
+        || document.documentElement.clientWidth
+        || document.body.clientWidth;
+    
+        var h = window.innerHeight
+        || document.documentElement.clientHeight
+        || document.body.clientHeight;
+    
+        var x = document.getElementById("bodyPage");
+    
+        if(w>991){
+          // Detectamos cuando el usuario desplace la pantalla
+          window.onscroll = function (){
+              // Obtenemos la posicion del scroll en pantall
+              var scroll = document.documentElement.scrollTop || document.body.scrollTop;
+              var elemento = document.getElementById("navPrincipal");
+    
+              // Realizamos alguna accion cuando el scroll este entre la posicion 300 y 400
+              if(scroll > 106){
+                  elemento.className = "container-fluid topnavFixed";
+              }else {
+                elemento.className = "container topnav";
+              }
+          }
+        }
+    
+        if(w<=991){
+          var elementoContainer = document.getElementById("contentSm");
+          elementoContainer.className = "container-fluid fixed-top";
+    
+        }
+    
+        function changeHeightDiv() {
+          var res;
+          currentvalue = document.getElementById('onoff').value;
+          if(currentvalue == "Off"){
+            res= document.getElementById("onoff").value="On";
+            console.log(res)
+            document.getElementById("HeightDiv").style.height="200px";
+            document.getElementById("textButtonList").innerHTML = 'Mostrar más Servicios <i id="" class="fa fa-caret-square-o-down"></i>';
+  
+          }else{
+            res=document.getElementById("onoff").value="Off";
+            console.log(res)
+            document.getElementById("HeightDiv").style.height="auto";
+            document.getElementById("textButtonList").innerHTML = 'Mostrar menos Servicios <i id="" class="fa fa-caret-square-o-up"></i>';
+          }
+        }
+    </script>
   </body>
 </html>
