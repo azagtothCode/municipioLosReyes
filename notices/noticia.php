@@ -101,13 +101,12 @@
     <div ng-controller="noticesCtrl">
       <div class="container" style="margin-top:15px;">
         <div class="row">
-          <h1>{{noticiasPost[0].tituloNoticia}}</h1>
+          <h1 id="titleNotice" >{{noticiasPost[0].tituloNoticia}}</h1>
+        </div>
+        <div id="rowHeadNoticia" class="row" style="padding:5px">
+          <img id="imgHeadNoticia"  src="../imgs/{{noticiasPost[0].imgNoticia}}">
         </div>
         <div class="row">
-          <img style="width:100%;" src="../imgs/{{noticiasPost[0].imgNoticia}}">
-        </div>
-        <div class="row">
-          <!-- <p style="margin-top:15px; text-align:justify;">{{noticiasPost[0].cuerpoNoticia}}</p> -->
           <p id="bodyNotice"></p>
         </div>
       </div>
@@ -284,16 +283,16 @@
     if(w>991){
       // Detectamos cuando el usuario desplace la pantalla
       window.onscroll = function (){
-          // Obtenemos la posicion del scroll en pantall
-          var scroll = document.documentElement.scrollTop || document.body.scrollTop;
-          var elemento = document.getElementById("navPrincipal");
+        // Obtenemos la posicion del scroll en pantall
+        var scroll = document.documentElement.scrollTop || document.body.scrollTop;
+        var elemento = document.getElementById("navPrincipal");
 
-          // Realizamos alguna accion cuando el scroll este entre la posicion 300 y 400
-          if(scroll > 106){
-              elemento.className = "container-fluid topnavFixed";
-          }else {
-            elemento.className = "container topnav";
-          }
+        // Realizamos alguna accion cuando el scroll este entre la posicion 300 y 400
+        if(scroll > 106){
+            elemento.className = "container-fluid topnavFixed";
+        }else {
+          elemento.className = "container topnav";
+        }
       }
     }
 
@@ -304,21 +303,20 @@
 
     var app = angular.module("myApp", []);
     app.controller('noticesCtrl', function( $http, $scope) {
-        $http.post("../connections/getNotices.php", { idNotice:<?php  echo $_GET["notice"]; ?>})
-        .then(function (response) {
-            $scope.noticiasPost = response.data.records;
-            $scope.noticiasPost[0].idNoticia;
-            var myJSON = JSON.stringify($scope.noticiasPost[0].cuerpoNoticia);
-            var res = myJSON.replace(/"/g, '');
-            document.getElementById("bodyNotice").innerHTML = res;
-            // console.log($scope.noticiasPost[0].idNoticia);
-            console.log("Noticia Recibida");
-          });
+      $http.post("../connections/getNotices.php", { idNotice:<?php  echo $_GET["notice"]; ?>})
+      .then(function (response) {
+          $scope.noticiasPost = response.data.records;
+          $scope.noticiasPost[0].idNoticia;
+          var myJSON = JSON.stringify($scope.noticiasPost[0].cuerpoNoticia);
+          var res = myJSON.replace(/"/g, '');
+          document.getElementById("bodyNotice").innerHTML = res;
+          // console.log($scope.noticiasPost[0].idNoticia);
+          console.log("Noticia Recibida");
+        });
     });
     
     </script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>

@@ -75,15 +75,26 @@
         }]
     });
 
-    app.controller('customersCtrl', function($scope, $http) {
+    app.controller('customersCtrl', function($scope, $http, $timeout) {
         $http.get("connections/noticesIndex.php")
-        .then(function (response) {$scope.names = response.data.records;
-            console.log($scope.names)}
+        .then(function (response) {
+            $scope.notices = response.data.records;
+            console.log("Hola",$scope.notices)
+            // $scope.notices = [];
+            // function showNext(array, index){
+            //   $timeout(function(x){
+            //     $scope.notices.push(x);
+            //     if(++index < array.length)
+            //       showNext(array, index);
+            //   }, 500, true, array[index])
+            // }
+            // showNext($scope.names, 0);
+            }
         );
     });
 
-    // app.controller('noticesCtrl', function( $http) {
-    //     $http.post("../connections/getNotices.php", { nombre: "name"});
-    // });
+    app.controller('noticesCtrl', function( $http) {
+        $http.post("../connections/getNotices.php", { nombre: "name"});
+    });
 
     
